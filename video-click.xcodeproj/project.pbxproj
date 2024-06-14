@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ADB3A71A2C1C77B600054C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB3A7192C1C77B600054C42 /* AppDelegate.swift */; };
+		ADB3A71E2C1C77B600054C42 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = ADB3A71D2C1C77B600054C42 /* Base */; };
+		ADB3A7202C1C77B600054C42 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB3A71F2C1C77B600054C42 /* Icon.png */; };
+		ADB3A7222C1C77B600054C42 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = ADB3A7212C1C77B600054C42 /* Style.css */; };
+		ADB3A7242C1C77B600054C42 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = ADB3A7232C1C77B600054C42 /* Script.js */; };
+		ADB3A7262C1C77B600054C42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB3A7252C1C77B600054C42 /* ViewController.swift */; };
+		ADB3A7292C1C77B600054C42 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = ADB3A7282C1C77B600054C42 /* Base */; };
+		ADB3A72B2C1C77BB00054C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB3A72A2C1C77BB00054C42 /* Assets.xcassets */; };
+		ADB3A7332C1C77BC00054C42 /* video-click Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = ADB3A7322C1C77BC00054C42 /* video-click Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		ADB3A7382C1C77BC00054C42 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB3A7372C1C77BC00054C42 /* SafariWebExtensionHandler.swift */; };
+		ADB3A73B2C1C77BC00054C42 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = ADB3A73A2C1C77BC00054C42 /* _locales */; };
+		ADB3A73D2C1C77BC00054C42 /* images in Resources */ = {isa = PBXBuildFile; fileRef = ADB3A73C2C1C77BC00054C42 /* images */; };
+		ADB3A73F2C1C77BC00054C42 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = ADB3A73E2C1C77BC00054C42 /* manifest.json */; };
+		ADB3A7412C1C77BC00054C42 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = ADB3A7402C1C77BC00054C42 /* background.js */; };
+		ADB3A7432C1C77BC00054C42 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = ADB3A7422C1C77BC00054C42 /* content.js */; };
+		ADB3A7452C1C77BC00054C42 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = ADB3A7442C1C77BC00054C42 /* popup.html */; };
+		ADB3A7472C1C77BC00054C42 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = ADB3A7462C1C77BC00054C42 /* popup.css */; };
+		ADB3A7492C1C77BC00054C42 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = ADB3A7482C1C77BC00054C42 /* popup.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ADB3A7342C1C77BC00054C42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADB3A70E2C1C77B600054C42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADB3A7312C1C77BC00054C42;
+			remoteInfo = "video-click Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ADB3A7512C1C77BC00054C42 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				ADB3A7332C1C77BC00054C42 /* video-click Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		ADB3A7162C1C77B600054C42 /* video-click.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "video-click.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADB3A7192C1C77B600054C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ADB3A71D2C1C77B600054C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
+		ADB3A71F2C1C77B600054C42 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		ADB3A7212C1C77B600054C42 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		ADB3A7232C1C77B600054C42 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		ADB3A7252C1C77B600054C42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ADB3A7282C1C77B600054C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ADB3A72A2C1C77BB00054C42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ADB3A72C2C1C77BB00054C42 /* video_click.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = video_click.entitlements; sourceTree = "<group>"; };
+		ADB3A72D2C1C77BB00054C42 /* video-click.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "video-click.entitlements"; sourceTree = "<group>"; };
+		ADB3A7322C1C77BC00054C42 /* video-click Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "video-click Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADB3A7372C1C77BC00054C42 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		ADB3A73A2C1C77BC00054C42 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
+		ADB3A73C2C1C77BC00054C42 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		ADB3A73E2C1C77BC00054C42 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		ADB3A7402C1C77BC00054C42 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
+		ADB3A7422C1C77BC00054C42 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
+		ADB3A7442C1C77BC00054C42 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
+		ADB3A7462C1C77BC00054C42 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = popup.css; sourceTree = "<group>"; };
+		ADB3A7482C1C77BC00054C42 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
+		ADB3A74A2C1C77BC00054C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADB3A74B2C1C77BC00054C42 /* video_click_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = video_click_Extension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ADB3A7132C1C77B600054C42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADB3A72F2C1C77BC00054C42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ADB3A70D2C1C77B600054C42 = {
+			isa = PBXGroup;
+			children = (
+				ADB3A7182C1C77B600054C42 /* video-click */,
+				ADB3A7362C1C77BC00054C42 /* video-click Extension */,
+				ADB3A7172C1C77B600054C42 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ADB3A7172C1C77B600054C42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADB3A7162C1C77B600054C42 /* video-click.app */,
+				ADB3A7322C1C77BC00054C42 /* video-click Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ADB3A7182C1C77B600054C42 /* video-click */ = {
+			isa = PBXGroup;
+			children = (
+				ADB3A7192C1C77B600054C42 /* AppDelegate.swift */,
+				ADB3A7252C1C77B600054C42 /* ViewController.swift */,
+				ADB3A7272C1C77B600054C42 /* Main.storyboard */,
+				ADB3A72A2C1C77BB00054C42 /* Assets.xcassets */,
+				ADB3A72C2C1C77BB00054C42 /* video_click.entitlements */,
+				ADB3A72D2C1C77BB00054C42 /* video-click.entitlements */,
+				ADB3A71B2C1C77B600054C42 /* Resources */,
+			);
+			path = "video-click";
+			sourceTree = "<group>";
+		};
+		ADB3A71B2C1C77B600054C42 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ADB3A71C2C1C77B600054C42 /* Main.html */,
+				ADB3A71F2C1C77B600054C42 /* Icon.png */,
+				ADB3A7212C1C77B600054C42 /* Style.css */,
+				ADB3A7232C1C77B600054C42 /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ADB3A7362C1C77BC00054C42 /* video-click Extension */ = {
+			isa = PBXGroup;
+			children = (
+				ADB3A7372C1C77BC00054C42 /* SafariWebExtensionHandler.swift */,
+				ADB3A74A2C1C77BC00054C42 /* Info.plist */,
+				ADB3A74B2C1C77BC00054C42 /* video_click_Extension.entitlements */,
+				ADB3A7392C1C77BC00054C42 /* Resources */,
+			);
+			path = "video-click Extension";
+			sourceTree = "<group>";
+		};
+		ADB3A7392C1C77BC00054C42 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ADB3A73A2C1C77BC00054C42 /* _locales */,
+				ADB3A73C2C1C77BC00054C42 /* images */,
+				ADB3A73E2C1C77BC00054C42 /* manifest.json */,
+				ADB3A7402C1C77BC00054C42 /* background.js */,
+				ADB3A7422C1C77BC00054C42 /* content.js */,
+				ADB3A7442C1C77BC00054C42 /* popup.html */,
+				ADB3A7462C1C77BC00054C42 /* popup.css */,
+				ADB3A7482C1C77BC00054C42 /* popup.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ADB3A7152C1C77B600054C42 /* video-click */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADB3A7522C1C77BC00054C42 /* Build configuration list for PBXNativeTarget "video-click" */;
+			buildPhases = (
+				ADB3A7122C1C77B600054C42 /* Sources */,
+				ADB3A7132C1C77B600054C42 /* Frameworks */,
+				ADB3A7142C1C77B600054C42 /* Resources */,
+				ADB3A7512C1C77BC00054C42 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADB3A7352C1C77BC00054C42 /* PBXTargetDependency */,
+			);
+			name = "video-click";
+			productName = "video-click";
+			productReference = ADB3A7162C1C77B600054C42 /* video-click.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ADB3A7312C1C77BC00054C42 /* video-click Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADB3A74E2C1C77BC00054C42 /* Build configuration list for PBXNativeTarget "video-click Extension" */;
+			buildPhases = (
+				ADB3A72E2C1C77BC00054C42 /* Sources */,
+				ADB3A72F2C1C77BC00054C42 /* Frameworks */,
+				ADB3A7302C1C77BC00054C42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "video-click Extension";
+			productName = "video-click Extension";
+			productReference = ADB3A7322C1C77BC00054C42 /* video-click Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ADB3A70E2C1C77B600054C42 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					ADB3A7152C1C77B600054C42 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					ADB3A7312C1C77BC00054C42 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = ADB3A7112C1C77B600054C42 /* Build configuration list for PBXProject "video-click" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ADB3A70D2C1C77B600054C42;
+			productRefGroup = ADB3A7172C1C77B600054C42 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ADB3A7152C1C77B600054C42 /* video-click */,
+				ADB3A7312C1C77BC00054C42 /* video-click Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ADB3A7142C1C77B600054C42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADB3A7202C1C77B600054C42 /* Icon.png in Resources */,
+				ADB3A7242C1C77B600054C42 /* Script.js in Resources */,
+				ADB3A71E2C1C77B600054C42 /* Base in Resources */,
+				ADB3A7222C1C77B600054C42 /* Style.css in Resources */,
+				ADB3A72B2C1C77BB00054C42 /* Assets.xcassets in Resources */,
+				ADB3A7292C1C77B600054C42 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADB3A7302C1C77BC00054C42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADB3A7412C1C77BC00054C42 /* background.js in Resources */,
+				ADB3A7472C1C77BC00054C42 /* popup.css in Resources */,
+				ADB3A7452C1C77BC00054C42 /* popup.html in Resources */,
+				ADB3A73D2C1C77BC00054C42 /* images in Resources */,
+				ADB3A73F2C1C77BC00054C42 /* manifest.json in Resources */,
+				ADB3A73B2C1C77BC00054C42 /* _locales in Resources */,
+				ADB3A7432C1C77BC00054C42 /* content.js in Resources */,
+				ADB3A7492C1C77BC00054C42 /* popup.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ADB3A7122C1C77B600054C42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADB3A7262C1C77B600054C42 /* ViewController.swift in Sources */,
+				ADB3A71A2C1C77B600054C42 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADB3A72E2C1C77BC00054C42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADB3A7382C1C77BC00054C42 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ADB3A7352C1C77BC00054C42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADB3A7312C1C77BC00054C42 /* video-click Extension */;
+			targetProxy = ADB3A7342C1C77BC00054C42 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ADB3A71C2C1C77B600054C42 /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADB3A71D2C1C77B600054C42 /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		ADB3A7272C1C77B600054C42 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADB3A7282C1C77B600054C42 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ADB3A74C2C1C77BC00054C42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ADB3A74D2C1C77BC00054C42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		ADB3A74F2C1C77BC00054C42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "video-click Extension/video_click_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "video-click Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "video-click Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pk.video-click.Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		ADB3A7502C1C77BC00054C42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "video-click Extension/video_click_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "video-click Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "video-click Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pk.video-click.Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		ADB3A7532C1C77BC00054C42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "video-click/video-click.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "video-click";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pk.video-click";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		ADB3A7542C1C77BC00054C42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "video-click/video-click.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "video-click";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pk.video-click";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ADB3A7112C1C77B600054C42 /* Build configuration list for PBXProject "video-click" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADB3A74C2C1C77BC00054C42 /* Debug */,
+				ADB3A74D2C1C77BC00054C42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADB3A74E2C1C77BC00054C42 /* Build configuration list for PBXNativeTarget "video-click Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADB3A74F2C1C77BC00054C42 /* Debug */,
+				ADB3A7502C1C77BC00054C42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADB3A7522C1C77BC00054C42 /* Build configuration list for PBXNativeTarget "video-click" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADB3A7532C1C77BC00054C42 /* Debug */,
+				ADB3A7542C1C77BC00054C42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ADB3A70E2C1C77B600054C42 /* Project object */;
+}
