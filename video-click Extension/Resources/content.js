@@ -13,7 +13,6 @@ browser.runtime.onMessage.addListener((request) => {
                 button.innerHTML = 'Save';
 
                 button.onclick = function(){
-                    console.log('sss')
                     browser.runtime.sendMessage({ iframeSrc: iframes[i].src }).then((response) => {
                         console.log(response);
                     });

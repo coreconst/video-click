@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de7f0f72-15b1-40ec-b15e-7125e4fe8ffb" name="Changes" comment="Add header component to choose section">
-      <change beforePath="$PROJECT_DIR$/video-click Extension/CoreDataStack.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click Extension/Scripting.swift" beforeDir="false" />
+    <list default="true" id="de7f0f72-15b1-40ec-b15e-7125e4fe8ffb" name="Changes" comment="Remove unnecessary classes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Base.lproj/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Base.lproj/Main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Resources/Script.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/Script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Resources/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/Style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/ViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/ViewController.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +57,10 @@
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SwiftWorkspaceSettings">
+    <option name="detectedToolchain" value="true" />
+    <option name="toolchainPathValue" value="/Library/Developer/CommandLineTools" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="de7f0f72-15b1-40ec-b15e-7125e4fe8ffb" name="Changes" comment="" />
@@ -74,6 +82,7 @@
       <workItem from="1719491265059" duration="2728000" />
       <workItem from="1719747909195" duration="2982000" />
       <workItem from="1719824783831" duration="123000" />
+      <workItem from="1719824920443" duration="7602000" />
     </task>
     <task id="LOCAL-00001" summary="Add tailwind instead of old styles">
       <option name="closed" value="true" />
@@ -91,7 +100,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718112524519</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Remove unnecessary classes">
+      <option name="closed" value="true" />
+      <created>1719825113690</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719825113690</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +128,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add tailwind instead of old styles" />
     <MESSAGE value="Add header component to choose section" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add header component to choose section" />
+    <MESSAGE value="Remove unnecessary classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove unnecessary classes" />
   </component>
 </project>

@@ -46,29 +46,43 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
 
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         
+        let data = (message.body as! String)
+        if(data.contains("remove")){
+            let urlArrayIndex = Int(data.split(separator: ":")[1]);
+            let defaults = UserDefaults(suiteName: "com.pk.video-click.group")
+            var urls = (defaults?.array(forKey:"sharedMessage")) ?? [];
+            if(urlArrayIndex != nil && !urls.isEmpty){
+                urls.remove(at: urlArrayIndex!)
+                defaults?.set(urls, forKey: "sharedMessage")
+            }
+        }
+        
+        if (data == "sync") {
+            syncUrls();
+    //        print(urls)
+    //        print(shell("cd \(NSHomeDirectory())/Downloads && /usr/local/bin/ffmpeg -i '\(url.dropFirst().dropLast())' -c copy 'check'.mp4"))
+        }
+    }
+    
+    private func syncUrls(){
         let defaults = UserDefaults(suiteName: "com.pk.video-click.group")
         let urls = (defaults?.array(forKey:"sharedMessage")) ?? [];
-        
-        if urls.isEmpty{
-            return
-        }
+
         if !urls.isEmpty {
-                    do {
-                        let jsonData = try JSONSerialization.data(withJSONObject: urls, options: [])
-                        if let jsonString = String(data: jsonData, encoding: .utf8) {
-                            let jsCode = "receiveUrls(\(jsonString));"
-                            webView.evaluateJavaScript(jsCode, completionHandler: { (result, error) in
-                                if let error = error {
-                                    print("Error executing JavaScript: \(error)")
-                                }
-                            })
+            do {
+                let jsonData = try JSONSerialization.data(withJSONObject: urls, options: [])
+                if let jsonString = String(data: jsonData, encoding: .utf8) {
+                    let jsCode = "receiveUrls(\(jsonString));"
+                    webView.evaluateJavaScript(jsCode, completionHandler: { (result, error) in
+                        if let error = error {
+                            print("Error executing JavaScript: \(error)")
                         }
-                    } catch {
-                        print("Error serializing JSON: \(error)")
-                    }
+                    })
                 }
-        print(urls)
-//        print(shell("cd \(NSHomeDirectory())/Downloads && /usr/local/bin/ffmpeg -i '\(url.dropFirst().dropLast())' -c copy 'check'.mp4"))
+            } catch {
+                print("Error serializing JSON: \(error)")
+            }
+        }
     }
 
 }

@@ -46,6 +46,14 @@ body.state-off :is(.state-on, .state-unknown) {
     row-gap: 0.75rem;
 }
 
+.hidden{
+    display: none;
+}
+
+.flex{
+    display: flex;
+}
+
 .card {
   width: 330px;
   height: 80px;
@@ -56,7 +64,6 @@ body.state-off :is(.state-on, .state-unknown) {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   position: relative;
   overflow: hidden;
-  display: flex;
   align-items: center;
   justify-content: space-around;
   gap: 15px;
@@ -74,7 +81,10 @@ body.state-off :is(.state-on, .state-unknown) {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  flex-grow: 1;
+  /*flex-grow: 1;*/
+  overflow: hidden;
+  position: relative;
+/*  width: 275px;*/
 }
 .file-name,
 .file-url {
@@ -82,21 +92,37 @@ body.state-off :is(.state-on, .state-unknown) {
   cursor: default;
 }
 .file-name {
-  color: #269b24;
+  color: black;
   font-size: 17px;
-  font-weight: 700;
+  padding: 5px 0;
+ border-width: 0 0 1px 0;
+ border-color: darkred;
+
+/*  font-weight: 700;*/
+}
+.file-url-overflow{
+    display: flex;
+/*    overflow: scroll;*/
+    
+/*    padding-bottom: 10px;*/
 }
 .file-url {
   font-size: 14px;
   color: #555;
 }
 .cross-icon {
-  width: 18px;
-  height: 18px;
-  color: #555;
-  cursor: pointer;
+  /*width: 18px;*/
+  /*height: 18px;*/
+  /*color: #555;*/
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 100%;
 }
-
+.cross-icon:hover{
+    background-color: lightblue;
+}
+/*.remove-url{*/
+/*}*/
 
 
 .sync{
