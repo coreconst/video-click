@@ -17,6 +17,7 @@ func shell(_ command:String) -> String {
     task.arguments = ["-c", command]
     task.launchPath = "/bin/zsh"
     task.standardInput = nil
+    task.environment = ["PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin"]
     task.launch()
     
     let data = pipe.fileHandleForReading.readDataToEndOfFile()
