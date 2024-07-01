@@ -10,12 +10,14 @@
     <script src="../Script.js" defer></script>
 </head>
 <body>
-<!--    <p class="state-check">check</p>-->
+    <div class="require-name hidden">File name is require</div>
     <div class="cards">
         <div class="card hidden">
-          <div class="icon-container">
+          <div class="download-container">
               <svg
-                  class="svgIcon"
+                  class="download-icon"
+                  width="18px"
+                  height="18px"
                   viewBox="0 0 384 512"
                   height="1em"
                   xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +28,9 @@
                 </svg>
           </div>
           <div class="message-text-container">
-            <input type="text" placeholder="File name" class="file-name"/>
+            <div>
+                  <input type="text" placeholder="File name" class="file-name"/>
+            </div>
               <div class="file-url-overflow">
                 <p class="file-url"></p>
               </div>
