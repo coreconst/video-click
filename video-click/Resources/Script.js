@@ -1,22 +1,20 @@
+let syncButton = document.getElementsByClassName('sync')[0];
+
 function show(enabled, useSettingsInsteadOfPreferences) {
     if (useSettingsInsteadOfPreferences) {
         document.getElementsByClassName('state-on')[0].innerText = "video-click’s extension is currently on. You can turn it off in the Extensions section of Safari Settings.";
         document.getElementsByClassName('state-off')[0].innerText = "video-click’s extension is currently off. You can turn it on in the Extensions section of Safari Settings.";
         document.getElementsByClassName('state-unknown')[0].innerText = "You can turn on video-click’s extension in the Extensions section of Safari Settings.";
-        document.getElementsByClassName('open-preferences')[0].innerText = "Quit and Open Safari Settings…";
-    }
-
-    if (typeof enabled === "boolean") {
-        document.body.classList.toggle(`state-on`, enabled);
-        document.body.classList.toggle(`state-off`, !enabled);
-    } else {
-        document.body.classList.remove(`state-on`);
-        document.body.classList.remove(`state-off`);
+        syncButton.innerText = "Sync";
     }
 }
 
-function openPreferences() {
-    webkit.messageHandlers.controller.postMessage("open-preferences");
+function receiveUrls(urls) {
+    document.getElementsByClassName('state-check')[0].innerText = urls[0]
 }
 
-document.querySelector("button.open-preferences").addEventListener("click", openPreferences);
+function syncUrl() {
+    webkit.messageHandlers.controller.postMessage("sync");
+}
+
+syncButton.addEventListener("click", syncUrl);

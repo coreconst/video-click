@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD09C81C2C2ACB37002E5174 /* Scripting.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD09C81B2C2ACB37002E5174 /* Scripting.swift */; };
 		ADB3A71A2C1C77B600054C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB3A7192C1C77B600054C42 /* AppDelegate.swift */; };
 		ADB3A71E2C1C77B600054C42 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = ADB3A71D2C1C77B600054C42 /* Base */; };
 		ADB3A7202C1C77B600054C42 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB3A71F2C1C77B600054C42 /* Icon.png */; };
@@ -38,6 +39,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		AD7E88422C2D8FA6004DE464 /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ADB3A7512C1C77BC00054C42 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,6 +63,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AD09C81B2C2ACB37002E5174 /* Scripting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scripting.swift; sourceTree = "<group>"; };
+		AD69060B2C2DB469001E1492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		ADB3A7162C1C77B600054C42 /* video-click.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "video-click.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB3A7192C1C77B600054C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADB3A71D2C1C77B600054C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
@@ -75,6 +88,8 @@
 		ADB3A7482C1C77BC00054C42 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
 		ADB3A74A2C1C77BC00054C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADB3A74B2C1C77BC00054C42 /* video_click_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = video_click_Extension.entitlements; sourceTree = "<group>"; };
+		ADE1B4862C2ED66A001B5CD6 /* video-clickDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "video-clickDebug.entitlements"; sourceTree = "<group>"; };
+		ADE1B48B2C2EE6BF001B5CD6 /* video-click ExtensionDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "video-click ExtensionDebug.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,8 +131,11 @@
 		ADB3A7182C1C77B600054C42 /* video-click */ = {
 			isa = PBXGroup;
 			children = (
+				ADE1B4862C2ED66A001B5CD6 /* video-clickDebug.entitlements */,
+				AD69060B2C2DB469001E1492 /* Info.plist */,
 				ADB3A7192C1C77B600054C42 /* AppDelegate.swift */,
 				ADB3A7252C1C77B600054C42 /* ViewController.swift */,
+				AD09C81B2C2ACB37002E5174 /* Scripting.swift */,
 				ADB3A7272C1C77B600054C42 /* Main.storyboard */,
 				ADB3A72A2C1C77BB00054C42 /* Assets.xcassets */,
 				ADB3A72C2C1C77BB00054C42 /* video_click.entitlements */,
@@ -141,6 +159,7 @@
 		ADB3A7362C1C77BC00054C42 /* video-click Extension */ = {
 			isa = PBXGroup;
 			children = (
+				ADE1B48B2C2EE6BF001B5CD6 /* video-click ExtensionDebug.entitlements */,
 				ADB3A7372C1C77BC00054C42 /* SafariWebExtensionHandler.swift */,
 				ADB3A74A2C1C77BC00054C42 /* Info.plist */,
 				ADB3A74B2C1C77BC00054C42 /* video_click_Extension.entitlements */,
@@ -175,6 +194,7 @@
 				ADB3A7132C1C77B600054C42 /* Frameworks */,
 				ADB3A7142C1C77B600054C42 /* Resources */,
 				ADB3A7512C1C77BC00054C42 /* Embed Foundation Extensions */,
+				AD7E88422C2D8FA6004DE464 /* Embed ExtensionKit Extensions */,
 			);
 			buildRules = (
 			);
@@ -209,7 +229,10 @@
 		ADB3A70E2C1C77B600054C42 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
+				BuildIndependentTargetsInParallel = NO;
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
@@ -277,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADB3A7262C1C77B600054C42 /* ViewController.swift in Sources */,
+				AD09C81C2C2ACB37002E5174 /* Scripting.swift in Sources */,
 				ADB3A71A2C1C77B600054C42 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,14 +464,18 @@
 		ADB3A74F2C1C77BC00054C42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "video-click Extension/video_click_Extension.entitlements";
+				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
+				CODE_SIGN_ENTITLEMENTS = "video-click Extension/video-click ExtensionDebug.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F6Z4UMGS8M;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "video-click Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "video-click Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSStickerSharingLevel = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -470,14 +498,18 @@
 		ADB3A7502C1C77BC00054C42 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
 				CODE_SIGN_ENTITLEMENTS = "video-click Extension/video_click_Extension.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F6Z4UMGS8M;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "video-click Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "video-click Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSStickerSharingLevel = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -503,13 +535,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "video-click/video-click.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "video-click/video-clickDebug.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F6Z4UMGS8M;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "video-click/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "video-click";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -539,12 +575,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "video-click/video-click.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F6Z4UMGS8M;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "video-click/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "video-click";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;

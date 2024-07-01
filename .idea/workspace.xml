@@ -5,11 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de7f0f72-15b1-40ec-b15e-7125e4fe8ffb" name="Changes" comment="Add header component to choose section">
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/preload/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/preload/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Check.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model.xcdatamodeld/Model.xcdatamodel/contents" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/download/BackgroundDownloadHandler.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/download/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/download/download.entitlements" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click Extension/CoreDataStack.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click Extension/Scripting.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click Extension/video-click ExtensionDebug.entitlements" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Scripting.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Station.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/UserDefaults.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/UserDefaultsObserver.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/video-clickDebug.entitlements" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/popup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/popup.html" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/popup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/popup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click Extension/SafariWebExtensionHandler.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/SafariWebExtensionHandler.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click Extension/video_click_Extension.entitlements" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/video_click_Extension.entitlements" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/video-click.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click.xcodeproj/xcuserdata/constantine.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/video-click.xcodeproj/xcuserdata/constantine.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/AppDelegate.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Base.lproj/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Base.lproj/Main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Base.lproj/Main.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Resources/Script.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/Script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Resources/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/Style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/ViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/ViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/video-click.entitlements" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/video-click.entitlements" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/video_click.entitlements" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/video_click.entitlements" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +64,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -68,6 +96,13 @@
       <workItem from="1718116855147" duration="3292000" />
       <workItem from="1718181644025" duration="12527000" />
       <workItem from="1718368113353" duration="1063000" />
+      <workItem from="1718622098696" duration="4914000" />
+      <workItem from="1718703735557" duration="8768000" />
+      <workItem from="1718788614914" duration="5248000" />
+      <workItem from="1718878623791" duration="2126000" />
+      <workItem from="1719486664428" duration="990000" />
+      <workItem from="1719491265059" duration="2728000" />
+      <workItem from="1719747909195" duration="2982000" />
     </task>
     <task id="LOCAL-00001" summary="Add tailwind instead of old styles">
       <option name="closed" value="true" />

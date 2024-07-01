@@ -11,7 +11,9 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        // Override point for customization after application launch.
+//        let sharedDefaults = UserDefaults(suiteName: "group.com.pk.video-click")
+//        print(sharedDefaults)
+
     }
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {

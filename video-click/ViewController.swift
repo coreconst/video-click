@@ -8,6 +8,7 @@
 import Cocoa
 import SafariServices
 import WebKit
+import SwiftUI
 
 let extensionBundleIdentifier = "com.pk.video-click.Extension"
 
@@ -31,7 +32,7 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
                 // Insert code to inform the user that something went wrong.
                 return
             }
-
+            
             DispatchQueue.main.async {
                 if #available(macOS 13, *) {
                     webView.evaluateJavaScript("show(\(state.isEnabled), true)")
@@ -42,16 +43,32 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
         }
     }
 
-    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        if (message.body as! String != "open-preferences") {
-            return;
-        }
 
-        SFSafariApplication.showPreferencesForExtension(withIdentifier: extensionBundleIdentifier) { error in
-            DispatchQueue.main.async {
-                NSApplication.shared.terminate(nil)
-            }
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        
+        let defaults = UserDefaults(suiteName: "com.pk.video-click.group")
+        let urls = (defaults?.array(forKey:"sharedMessage")) ?? [];
+        
+        if urls.isEmpty{
+            return
         }
+        if !urls.isEmpty {
+                    do {
+                        let jsonData = try JSONSerialization.data(withJSONObject: urls, options: [])
+                        if let jsonString = String(data: jsonData, encoding: .utf8) {
+                            let jsCode = "receiveUrls(\(jsonString));"
+                            webView.evaluateJavaScript(jsCode, completionHandler: { (result, error) in
+                                if let error = error {
+                                    print("Error executing JavaScript: \(error)")
+                                }
+                            })
+                        }
+                    } catch {
+                        print("Error serializing JSON: \(error)")
+                    }
+                }
+        print(urls)
+//        print(shell("cd \(NSHomeDirectory())/Downloads && /usr/local/bin/ffmpeg -i '\(url.dropFirst().dropLast())' -c copy 'check'.mp4"))
     }
 
 }

@@ -4,10 +4,43 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>download.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>video-click Extension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>video-click.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>AD7E88352C2D8FA6004DE464</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AD7E88462C2D902D004DE464</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ADB3A7152C1C77B600054C42</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ADB3A7312C1C77BC00054C42</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
