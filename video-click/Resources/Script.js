@@ -19,16 +19,32 @@ function receiveUrls(urls) {
             continue;
         }
         let card = document.getElementsByClassName('card')[0].cloneNode(true);
+        
         card.getElementsByClassName('file-url')[0].innerText = url;
         card.classList.remove('hidden');
-        card.classList.remove('prototype');
         card.classList.add('flex');
+        
         let crossIcon = card.getElementsByClassName('cross-icon')[0];
         crossIcon.onclick = function (){
             card.classList.remove('flex');
             card.classList.add('hidden');
-           removeUrl(i);
+           removeUrlByIndex(i);
         };
+        
+        let fileName = card.getElementsByClassName('file-name')[0];
+        let requireFileName = document.getElementsByClassName('require-name')[0];
+
+        let downloadIcon = card.getElementsByClassName('download-icon')[0];
+        downloadIcon.onclick = function (){
+            if(fileName.value.length > 0){
+                requireFileName.classList.add("hidden");
+                downloadByIndex(i, fileName.value);
+            } else {
+                requireFileName.innerText = "File name is require";
+                requireFileName.classList.remove("hidden");
+            }
+        };
+        
         cards.append(card);
     }
     allUrls = urls;
@@ -38,8 +54,12 @@ function syncUrl() {
     webkit.messageHandlers.controller.postMessage("sync");
 }
 
-function removeUrl(index){
+function removeUrlByIndex(index){
     webkit.messageHandlers.controller.postMessage("remove:" + index);
+}
+
+function downloadByIndex(index, name){
+    webkit.messageHandlers.controller.postMessage("download:" + index + ":" + name);
 }
 
 

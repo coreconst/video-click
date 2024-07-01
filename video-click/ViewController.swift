@@ -47,14 +47,23 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         
         let data = (message.body as! String)
+        
+        let defaults = UserDefaults(suiteName: "com.pk.video-click.group")
+        var urls = (defaults?.array(forKey:"sharedMessage")) ?? [];
+        
         if(data.contains("remove")){
             let urlArrayIndex = Int(data.split(separator: ":")[1]);
-            let defaults = UserDefaults(suiteName: "com.pk.video-click.group")
-            var urls = (defaults?.array(forKey:"sharedMessage")) ?? [];
+            
             if(urlArrayIndex != nil && !urls.isEmpty){
                 urls.remove(at: urlArrayIndex!)
                 defaults?.set(urls, forKey: "sharedMessage")
             }
+        }
+        
+        if(data.contains("download")){
+            let urlArrayIndex = Int(data.split(separator: ":")[1]);
+            let url = urls[urlArrayIndex!];
+            
         }
         
         if (data == "sync") {
