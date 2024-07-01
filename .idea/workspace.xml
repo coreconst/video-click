@@ -5,38 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de7f0f72-15b1-40ec-b15e-7125e4fe8ffb" name="Changes" comment="Add header component to choose section">
-      <change afterPath="$PROJECT_DIR$/Check.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Model.xcdatamodeld/Model.xcdatamodel/contents" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/download/BackgroundDownloadHandler.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/download/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/download/download.entitlements" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click Extension/CoreDataStack.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click Extension/Scripting.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click Extension/video-click ExtensionDebug.entitlements" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click/Scripting.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click/Station.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click/UserDefaults.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click/UserDefaultsObserver.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click/video-clickDebug.entitlements" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/background.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/popup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/popup.html" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/popup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/popup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click Extension/SafariWebExtensionHandler.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/SafariWebExtensionHandler.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click Extension/video_click_Extension.entitlements" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/video_click_Extension.entitlements" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/video-click.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click.xcodeproj/xcuserdata/constantine.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/video-click.xcodeproj/xcuserdata/constantine.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/AppDelegate.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click/Base.lproj/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Base.lproj/Main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Base.lproj/Main.storyboard" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click/Resources/Script.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/Script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click/Resources/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/Style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click/ViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/ViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click/video-click.entitlements" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/video-click.entitlements" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click/video_click.entitlements" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/video_click.entitlements" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click Extension/CoreDataStack.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click Extension/Scripting.swift" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +73,7 @@
       <workItem from="1719486664428" duration="990000" />
       <workItem from="1719491265059" duration="2728000" />
       <workItem from="1719747909195" duration="2982000" />
+      <workItem from="1719824783831" duration="123000" />
     </task>
     <task id="LOCAL-00001" summary="Add tailwind instead of old styles">
       <option name="closed" value="true" />
@@ -125,6 +96,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add tailwind instead of old styles" />
