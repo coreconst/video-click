@@ -34,10 +34,11 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
             }
             
             DispatchQueue.main.async {
-                if #available(macOS 13, *) {
-                    webView.evaluateJavaScript("show(\(state.isEnabled), true)")
-                } else {
-                    webView.evaluateJavaScript("show(\(state.isEnabled), false)")
+                let path = (getUserDefaults("savedDirectoryPath") as! String);
+                print(path)
+                
+                if !(path.isEmpty){
+                    self.sendDirectoryPathToJS(path)
                 }
             }
         }
@@ -47,35 +48,42 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         
         let data = (message.body as! String)
-        
-        let defaults = UserDefaults(suiteName: "com.pk.video-click.group")
-        var urls = (defaults?.array(forKey:"sharedMessage")) ?? [];
+        if(data == "browse"){
+            openDirectoryPicker()
+        }
+            
+        var urls = getUserDefaults("sharedMessage") as! Array<String>
         
         if(data.contains("remove")){
             let urlArrayIndex = Int(data.split(separator: ":")[1]);
             
             if(urlArrayIndex != nil && !urls.isEmpty){
                 urls.remove(at: urlArrayIndex!)
-                defaults?.set(urls, forKey: "sharedMessage")
+                setUserDefaults(data: urls, forKey: "sharedMessage")
             }
         }
         
         if(data.contains("download")){
-            let urlArrayIndex = Int(data.split(separator: ":")[1]);
-            let url = urls[urlArrayIndex!];
+            let arr = data.split(separator: ":");
+            let urlArrayIndex = Int(arr[1]);
             
+            let fileName = String(arr[2])
+            let url = (urls[urlArrayIndex!]).dropFirst().dropLast();
+    
+            let path = getUserDefaults("savedDirectoryPath") as! String
+            
+            if(!path.isEmpty && !url.isEmpty){
+//                print(shell("cd \(path) && ffmpeg -i '\(url)' -c copy '\(fileName)'.mp4"))
+            }
         }
         
         if (data == "sync") {
             syncUrls();
-    //        print(urls)
-    //        print(shell("cd \(NSHomeDirectory())/Downloads && /usr/local/bin/ffmpeg -i '\(url.dropFirst().dropLast())' -c copy 'check'.mp4"))
         }
     }
     
     private func syncUrls(){
-        let defaults = UserDefaults(suiteName: "com.pk.video-click.group")
-        let urls = (defaults?.array(forKey:"sharedMessage")) ?? [];
+        let urls = getUserDefaults("sharedMessage") as! Array<String>;
 
         if !urls.isEmpty {
             do {
@@ -92,6 +100,27 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
                 print("Error serializing JSON: \(error)")
             }
         }
+    }
+    
+    private func openDirectoryPicker() {
+            let dialog = NSOpenPanel()
+            dialog.title = "Choose a directory"
+            dialog.canChooseDirectories = true
+            dialog.canChooseFiles = false
+            dialog.allowsMultipleSelection = false
+            
+            if dialog.runModal() == .OK {
+                if let url = dialog.url {
+                    let path = url.path
+                    setUserDefaults(data: path, forKey: "savedDirectoryPath")
+                    sendDirectoryPathToJS(path)
+                }
+            }
+        }
+        
+    private func sendDirectoryPathToJS(_ path: String) {
+        let dir = path.split(separator: "/")
+        webView.evaluateJavaScript("showPath('\(dir[dir.count - 1])')")
     }
 
 }

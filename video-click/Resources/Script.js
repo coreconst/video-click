@@ -1,13 +1,21 @@
 let syncButton = document.getElementsByClassName('sync')[0];
 
-//function show(enabled, useSettingsInsteadOfPreferences) {
-//    if (useSettingsInsteadOfPreferences) {
-//        document.getElementsByClassName('state-on')[0].innerText = "video-click’s extension is currently on. You can turn it off in the Extensions section of Safari Settings.";
-//        document.getElementsByClassName('state-off')[0].innerText = "video-click’s extension is currently off. You can turn it on in the Extensions section of Safari Settings.";
-//        document.getElementsByClassName('state-unknown')[0].innerText = "You can turn on video-click’s extension in the Extensions section of Safari Settings.";
-//        syncButton.innerText = "Sync";
-//    }
-//}
+
+//    let temp1 = document.getElementsByClassName('temp1')[0];
+//    let content = document.getElementsByClassName('content')[0];
+//    const clone = document.importNode(temp1.content, true);
+//    content.appendChild(clone);
+let dirPath = document.getElementsByClassName("directory-name")[0];
+function showPath(dir){
+    dirPath.innerText = dir;
+    dirPath.classList.remove("empty-dir");
+    dirPath.classList.remove("text-red");
+}
+
+document.getElementsByClassName('browse-button')[0].onclick = function(){
+    webkit.messageHandlers.controller.postMessage("browse");
+}
+
 let allUrls = [];
 
 function receiveUrls(urls) {
@@ -36,12 +44,16 @@ function receiveUrls(urls) {
 
         let downloadIcon = card.getElementsByClassName('download-icon')[0];
         downloadIcon.onclick = function (){
-            if(fileName.value.length > 0){
-                requireFileName.classList.add("hidden");
-                downloadByIndex(i, fileName.value);
+            if(!dirPath.classList.contains("empty-dir")){
+                if(fileName.value.length > 0){
+                    requireFileName.classList.add("hidden");
+                    downloadByIndex(i, fileName.value);
+                } else {
+                    requireFileName.innerText = "File name is require";
+                    requireFileName.classList.remove("hidden");
+                }
             } else {
-                requireFileName.innerText = "File name is require";
-                requireFileName.classList.remove("hidden");
+                dirPath.classList.add("text-red");
             }
         };
         
