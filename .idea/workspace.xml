@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de7f0f72-15b1-40ec-b15e-7125e4fe8ffb" name="Changes" comment="Add style, add remove function">
+    <list default="true" id="de7f0f72-15b1-40ec-b15e-7125e4fe8ffb" name="Changes" comment="Add download script handle">
+      <change afterPath="$PROJECT_DIR$/video-click/Resources/Content/Download.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/UserStorage.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/video-click.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-click/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/AppDelegate.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-click/Base.lproj/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Base.lproj/Main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Base.lproj/Main.storyboard" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-click/Resources/Script.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/Script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-click/Resources/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/Style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click/Scripting.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Scripting.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-click/ViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/ViewController.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +86,9 @@
       <workItem from="1719491265059" duration="2728000" />
       <workItem from="1719747909195" duration="2982000" />
       <workItem from="1719824783831" duration="123000" />
-      <workItem from="1719824920443" duration="12359000" />
+      <workItem from="1719824920443" duration="21079000" />
+      <workItem from="1719907973565" duration="3717000" />
+      <workItem from="1719951357570" duration="1777000" />
     </task>
     <task id="LOCAL-00001" summary="Add tailwind instead of old styles">
       <option name="closed" value="true" />
@@ -117,7 +122,31 @@
       <option name="project" value="LOCAL" />
       <updated>1719833910464</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add environment to scripting">
+      <option name="closed" value="true" />
+      <created>1719859078614</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719859078614</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Change style in main.html">
+      <option name="closed" value="true" />
+      <created>1719859176088</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1719859176088</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add download script handle">
+      <option name="closed" value="true" />
+      <created>1719859231796</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1719859231796</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +168,9 @@
     <MESSAGE value="Add header component to choose section" />
     <MESSAGE value="Remove unnecessary classes" />
     <MESSAGE value="Add style, add remove function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add style, add remove function" />
+    <MESSAGE value="Add environment to scripting" />
+    <MESSAGE value="Change style in main.html" />
+    <MESSAGE value="Add download script handle" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add download script handle" />
   </component>
 </project>

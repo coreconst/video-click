@@ -26,6 +26,8 @@
 		ADB3A7452C1C77BC00054C42 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = ADB3A7442C1C77BC00054C42 /* popup.html */; };
 		ADB3A7472C1C77BC00054C42 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = ADB3A7462C1C77BC00054C42 /* popup.css */; };
 		ADB3A7492C1C77BC00054C42 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = ADB3A7482C1C77BC00054C42 /* popup.js */; };
+		ADF47A3A2C33E71900737A0F /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF47A392C33E71900737A0F /* UserStorage.swift */; };
+		ADF47A4E2C33F5EC00737A0F /* Download.html in Resources */ = {isa = PBXBuildFile; fileRef = ADF47A4D2C33F5EC00737A0F /* Download.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		ADB3A74B2C1C77BC00054C42 /* video_click_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = video_click_Extension.entitlements; sourceTree = "<group>"; };
 		ADE1B4862C2ED66A001B5CD6 /* video-clickDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "video-clickDebug.entitlements"; sourceTree = "<group>"; };
 		ADE1B48B2C2EE6BF001B5CD6 /* video-click ExtensionDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "video-click ExtensionDebug.entitlements"; sourceTree = "<group>"; };
+		ADF47A392C33E71900737A0F /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
+		ADF47A4D2C33F5EC00737A0F /* Download.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Download.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,7 @@
 				ADB3A7192C1C77B600054C42 /* AppDelegate.swift */,
 				ADB3A7252C1C77B600054C42 /* ViewController.swift */,
 				AD09C81B2C2ACB37002E5174 /* Scripting.swift */,
+				ADF47A392C33E71900737A0F /* UserStorage.swift */,
 				ADB3A7272C1C77B600054C42 /* Main.storyboard */,
 				ADB3A72A2C1C77BB00054C42 /* Assets.xcassets */,
 				ADB3A72C2C1C77BB00054C42 /* video_click.entitlements */,
@@ -148,6 +153,7 @@
 		ADB3A71B2C1C77B600054C42 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ADF47A4A2C33F25500737A0F /* Content */,
 				ADB3A71C2C1C77B600054C42 /* Main.html */,
 				ADB3A71F2C1C77B600054C42 /* Icon.png */,
 				ADB3A7212C1C77B600054C42 /* Style.css */,
@@ -181,6 +187,14 @@
 				ADB3A7482C1C77BC00054C42 /* popup.js */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		ADF47A4A2C33F25500737A0F /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				ADF47A4D2C33F5EC00737A0F /* Download.html */,
+			);
+			path = Content;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +285,7 @@
 				ADB3A7202C1C77B600054C42 /* Icon.png in Resources */,
 				ADB3A7242C1C77B600054C42 /* Script.js in Resources */,
 				ADB3A71E2C1C77B600054C42 /* Base in Resources */,
+				ADF47A4E2C33F5EC00737A0F /* Download.html in Resources */,
 				ADB3A7222C1C77B600054C42 /* Style.css in Resources */,
 				ADB3A72B2C1C77BB00054C42 /* Assets.xcassets in Resources */,
 				ADB3A7292C1C77B600054C42 /* Base in Resources */,
@@ -299,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADF47A3A2C33E71900737A0F /* UserStorage.swift in Sources */,
 				ADB3A7262C1C77B600054C42 /* ViewController.swift in Sources */,
 				AD09C81C2C2ACB37002E5174 /* Scripting.swift in Sources */,
 				ADB3A71A2C1C77B600054C42 /* AppDelegate.swift in Sources */,
