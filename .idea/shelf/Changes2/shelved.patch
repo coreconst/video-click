@@ -1,0 +1,76 @@
+Index: video-click/Resources/Script.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/video-click/Resources/Script.js b/video-click/Resources/Script.js
+deleted file mode 100644
+--- a/video-click/Resources/Script.js	(revision 67db79c97c72f2356bd9b7dccfec85ead34b7483)
++++ /dev/null	(revision 67db79c97c72f2356bd9b7dccfec85ead34b7483)
+@@ -1,66 +0,0 @@
+-let syncButton = document.getElementsByClassName('sync')[0];
+-
+-//function show(enabled, useSettingsInsteadOfPreferences) {
+-//    if (useSettingsInsteadOfPreferences) {
+-//        document.getElementsByClassName('state-on')[0].innerText = "video-click’s extension is currently on. You can turn it off in the Extensions section of Safari Settings.";
+-//        document.getElementsByClassName('state-off')[0].innerText = "video-click’s extension is currently off. You can turn it on in the Extensions section of Safari Settings.";
+-//        document.getElementsByClassName('state-unknown')[0].innerText = "You can turn on video-click’s extension in the Extensions section of Safari Settings.";
+-//        syncButton.innerText = "Sync";
+-//    }
+-//}
+-let allUrls = [];
+-
+-function receiveUrls(urls) {
+-    let cards = document.getElementsByClassName('cards')[0];
+-    
+-    for(let i = 0; i < urls.length; i++){
+-        let url = urls[i];
+-        if(allUrls.includes(url)){
+-            continue;
+-        }
+-        let card = document.getElementsByClassName('card')[0].cloneNode(true);
+-        
+-        card.getElementsByClassName('file-url')[0].innerText = url;
+-        card.classList.remove('hidden');
+-        card.classList.add('flex');
+-        
+-        let crossIcon = card.getElementsByClassName('cross-icon')[0];
+-        crossIcon.onclick = function (){
+-            card.classList.remove('flex');
+-            card.classList.add('hidden');
+-           removeUrlByIndex(i);
+-        };
+-        
+-        let fileName = card.getElementsByClassName('file-name')[0];
+-        let requireFileName = document.getElementsByClassName('require-name')[0];
+-
+-        let downloadIcon = card.getElementsByClassName('download-icon')[0];
+-        downloadIcon.onclick = function (){
+-            if(fileName.value.length > 0){
+-                requireFileName.classList.add("hidden");
+-                downloadByIndex(i, fileName.value);
+-            } else {
+-                requireFileName.innerText = "File name is require";
+-                requireFileName.classList.remove("hidden");
+-            }
+-        };
+-        
+-        cards.append(card);
+-    }
+-    allUrls = urls;
+-}
+-
+-function syncUrl() {
+-    webkit.messageHandlers.controller.postMessage("sync");
+-}
+-
+-function removeUrlByIndex(index){
+-    webkit.messageHandlers.controller.postMessage("remove:" + index);
+-}
+-
+-function downloadByIndex(index, name){
+-    webkit.messageHandlers.controller.postMessage("download:" + index + ":" + name);
+-}
+-
+-
+-syncButton.addEventListener("click", syncUrl);

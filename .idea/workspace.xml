@@ -4,14 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de7f0f72-15b1-40ec-b15e-7125e4fe8ffb" name="Changes" comment="Add download script handle">
-      <change afterPath="$PROJECT_DIR$/video-click/Resources/Content/Download.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click/UserStorage.swift" afterDir="false" />
+    <list default="true" id="de7f0f72-15b1-40ec-b15e-7125e4fe8ffb" name="Changes" comment="Change window size and styling">
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/1024.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/128.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/256 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/256.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/32 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/512 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/64.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/LargeIcon.imageset/128.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/LargeIcon.imageset/256.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/LargeIcon.imageset/512 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Resources/css/download.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Resources/css/header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Resources/js/download.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Resources/view/download.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Resources/view/how-it-works.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-click.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/video-click.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-click/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/AppDelegate.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Assets.xcassets/LargeIcon.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/LargeIcon.imageset/Contents.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-click/Base.lproj/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Base.lproj/Main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Base.lproj/Main.storyboard" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-click/Resources/Script.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/Script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-click/Resources/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/Style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-click/ViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/ViewController.swift" afterDir="false" />
@@ -88,7 +105,8 @@
       <workItem from="1719824783831" duration="123000" />
       <workItem from="1719824920443" duration="21079000" />
       <workItem from="1719907973565" duration="3717000" />
-      <workItem from="1719951357570" duration="1777000" />
+      <workItem from="1719951357570" duration="2385000" />
+      <workItem from="1720101376726" duration="4868000" />
     </task>
     <task id="LOCAL-00001" summary="Add tailwind instead of old styles">
       <option name="closed" value="true" />
@@ -146,7 +164,31 @@
       <option name="project" value="LOCAL" />
       <updated>1719859231796</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add user defaults function">
+      <option name="closed" value="true" />
+      <created>1719953559334</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1719953559334</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add script to browse folder">
+      <option name="closed" value="true" />
+      <created>1719953667944</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1719953667944</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Change window size and styling">
+      <option name="closed" value="true" />
+      <created>1719953759433</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1719953759433</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +213,9 @@
     <MESSAGE value="Add environment to scripting" />
     <MESSAGE value="Change style in main.html" />
     <MESSAGE value="Add download script handle" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add download script handle" />
+    <MESSAGE value="Add user defaults function" />
+    <MESSAGE value="Add script to browse folder" />
+    <MESSAGE value="Change window size and styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change window size and styling" />
   </component>
 </project>

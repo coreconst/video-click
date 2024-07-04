@@ -1,0 +1,16 @@
+Index: video-click/Resources/Script.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>let syncButton = document.getElementsByClassName('sync')[0];\n\n//function show(enabled, useSettingsInsteadOfPreferences) {\n//    if (useSettingsInsteadOfPreferences) {\n//        document.getElementsByClassName('state-on')[0].innerText = \"video-click’s extension is currently on. You can turn it off in the Extensions section of Safari Settings.\";\n//        document.getElementsByClassName('state-off')[0].innerText = \"video-click’s extension is currently off. You can turn it on in the Extensions section of Safari Settings.\";\n//        document.getElementsByClassName('state-unknown')[0].innerText = \"You can turn on video-click’s extension in the Extensions section of Safari Settings.\";\n//        syncButton.innerText = \"Sync\";\n//    }\n//}\nlet allUrls = [];\n\nfunction receiveUrls(urls) {\n    let cards = document.getElementsByClassName('cards')[0];\n    \n    for(let i = 0; i < urls.length; i++){\n        let url = urls[i];\n        if(allUrls.includes(url)){\n            continue;\n        }\n        let card = document.getElementsByClassName('card')[0].cloneNode(true);\n        \n        card.getElementsByClassName('file-url')[0].innerText = url;\n        card.classList.remove('hidden');\n        card.classList.add('flex');\n        \n        let crossIcon = card.getElementsByClassName('cross-icon')[0];\n        crossIcon.onclick = function (){\n            card.classList.remove('flex');\n            card.classList.add('hidden');\n           removeUrlByIndex(i);\n        };\n        \n        let fileName = card.getElementsByClassName('file-name')[0];\n        let requireFileName = document.getElementsByClassName('require-name')[0];\n\n        let downloadIcon = card.getElementsByClassName('download-icon')[0];\n        downloadIcon.onclick = function (){\n            if(fileName.value.length > 0){\n                requireFileName.classList.add(\"hidden\");\n                downloadByIndex(i, fileName.value);\n            } else {\n                requireFileName.innerText = \"File name is require\";\n                requireFileName.classList.remove(\"hidden\");\n            }\n        };\n        \n        cards.append(card);\n    }\n    allUrls = urls;\n}\n\nfunction syncUrl() {\n    webkit.messageHandlers.controller.postMessage(\"sync\");\n}\n\nfunction removeUrlByIndex(index){\n    webkit.messageHandlers.controller.postMessage(\"remove:\" + index);\n}\n\nfunction downloadByIndex(index, name){\n    webkit.messageHandlers.controller.postMessage(\"download:\" + index + \":\" + name);\n}\n\n\nsyncButton.addEventListener(\"click\", syncUrl);\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/video-click/Resources/Script.js b/video-click/Resources/Script.js
+--- a/video-click/Resources/Script.js	(revision 67db79c97c72f2356bd9b7dccfec85ead34b7483)
++++ b/video-click/Resources/Script.js	(date 1719910787399)
+@@ -63,4 +63,4 @@
+ }
+ 
+ 
+-syncButton.addEventListener("click", syncUrl);
++//syncButton.addEventListener("click", syncUrl);

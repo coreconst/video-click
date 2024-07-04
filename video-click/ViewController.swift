@@ -35,7 +35,6 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
             
             DispatchQueue.main.async {
                 let path = (getUserDefaults("savedDirectoryPath") as! String);
-                print(path)
                 
                 if !(path.isEmpty){
                     self.sendDirectoryPathToJS(path)
