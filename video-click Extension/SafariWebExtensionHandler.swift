@@ -39,7 +39,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
         
             let response = NSExtensionItem()
         
-            response.userInfo = [ SFExtensionMessageKey: [ "Response to": "Saved"] ]
+            response.userInfo = [ SFExtensionMessageKey: [ "status": "saved"] ]
     
             context.completeRequest(returningItems: [response], completionHandler: nil)
     }
