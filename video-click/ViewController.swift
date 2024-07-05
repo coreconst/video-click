@@ -35,6 +35,7 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
             
             DispatchQueue.main.async {
                 let path = (getUserDefaults("savedDirectoryPath") as! String);
+//                let urls = getUserDefaults("sharedMessage") as! Array<String>;
                 
                 if !(path.isEmpty){
                     self.sendDirectoryPathToJS(path)
@@ -46,37 +47,41 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
 
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         
-        let data = (message.body as! String)
-        if(data == "browse"){
+        let data = parseJsonData(jsonData: (message.body as! String))
+        let action = data.action;
+        
+        if(action == "browse"){
             openDirectoryPicker()
+            return;
         }
             
         var urls = getUserDefaults("sharedMessage") as! Array<String>
         
-        if(data.contains("remove")){
-            let urlArrayIndex = Int(data.split(separator: ":")[1]);
+        if(action == "remove"){
+            let url = data.url
             
-            if(urlArrayIndex != nil && !urls.isEmpty){
+            let urlArrayIndex = urls.firstIndex(of: url);
+            
+            if(urlArrayIndex != nil){
                 urls.remove(at: urlArrayIndex!)
                 setUserDefaults(data: urls, forKey: "sharedMessage")
             }
+            return;
         }
         
-        if(data.contains("download")){
-            let arr = data.split(separator: ":");
-            let urlArrayIndex = Int(arr[1]);
-            
-            let fileName = String(arr[2])
-            let url = (urls[urlArrayIndex!]).dropFirst().dropLast();
-    
+        if(action == "download"){
+            let fileName = data.name;
+            let url = data.url;
+           
             let path = getUserDefaults("savedDirectoryPath") as! String
             
             if(!path.isEmpty && !url.isEmpty){
 //                print(shell("cd \(path) && ffmpeg -i '\(url)' -c copy '\(fileName)'.mp4"))
             }
+            return;
         }
         
-        if (data == "sync") {
+        if (action == "sync") {
             syncUrls();
         }
     }

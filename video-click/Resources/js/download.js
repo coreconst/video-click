@@ -1,5 +1,10 @@
 let syncButton = document.getElementsByClassName('sync')[0];
 
+let requestObj = {
+    action: "",
+    url: "",
+    name: ""
+}
 
 let dirPath = document.getElementsByClassName("directory-name")[0];
 function showPath(dir){
@@ -9,7 +14,8 @@ function showPath(dir){
 }
 
 document.getElementsByClassName('browse-button')[0].onclick = function(){
-    webkit.messageHandlers.controller.postMessage("browse");
+    requestObj.action = "browse";
+    webkit.messageHandlers.controller.postMessage(requestObj);
 }
 
 let allUrls = [];
@@ -32,7 +38,7 @@ function receiveUrls(urls) {
         crossIcon.onclick = function (){
             card.classList.remove('flex');
             card.classList.add('hidden');
-           removeUrlByIndex(i);
+           removeUrl(url);
         };
         
         let fileName = card.getElementsByClassName('file-name')[0];
@@ -43,7 +49,7 @@ function receiveUrls(urls) {
             if(!dirPath.classList.contains("empty-dir")){
                 if(fileName.value.length > 0){
                     requireFileName.classList.add("hidden");
-                    downloadByIndex(i, fileName.value);
+                    download(url, fileName.value);
                 } else {
                     requireFileName.innerText = "File name is require";
                     requireFileName.classList.remove("hidden");
@@ -59,15 +65,19 @@ function receiveUrls(urls) {
 }
 
 function syncUrl() {
-    webkit.messageHandlers.controller.postMessage("sync");
+    requestObj.action = "sync";
+    webkit.messageHandlers.controller.postMessage(JSON.stringify(requestObj));
 }
 
-function removeUrlByIndex(index){
-    webkit.messageHandlers.controller.postMessage("remove:" + index);
+function removeUrl(url){
+    requestObj.action = "remove";
+    requestObj.url = url;
+    webkit.messageHandlers.controller.postMessage(JSON.stringify(requestObj));
 }
 
-function downloadByIndex(index, name){
-    webkit.messageHandlers.controller.postMessage("download:" + index + ":" + name);
+function download(url, name){
+    requestObj = {action: "download", url: url, name: name};
+    webkit.messageHandlers.controller.postMessage(JSON.stringify(requestObj));
 }
 
 
