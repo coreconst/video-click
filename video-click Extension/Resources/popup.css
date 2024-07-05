@@ -17,17 +17,29 @@ body {
 .center{
     display: flex;
     column-gap: 0.75rem;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
 }
 
-.button{
+.active{
+    color: rgb(66, 172, 0);
+}
+
+.select{
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
-    font-size: 1.125rem;
+    font-size: 14px;
     line-height: 1.75rem;
     font-weight: 500;
+    border: 1px solid rgb(166, 172, 175);
+    border-radius: 20px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.72);
+}
+
+.select:hover{
+    background: lightgray;
 }
