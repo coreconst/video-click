@@ -4,33 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de7f0f72-15b1-40ec-b15e-7125e4fe8ffb" name="Changes" comment="Change window size and styling">
-      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/1024.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/256 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/32 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/512 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/64.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/LargeIcon.imageset/128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/LargeIcon.imageset/256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/LargeIcon.imageset/512 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click/Resources/css/download.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click/Resources/css/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click/Resources/js/download.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click/Resources/view/download.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-click/Resources/view/how-it-works.html" afterDir="false" />
+    <list default="true" id="de7f0f72-15b1-40ec-b15e-7125e4fe8ffb" name="Changes" comment="Delegate resources">
+      <change afterPath="$PROJECT_DIR$/video-click/JsonParser.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/popup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/popup.html" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/popup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/popup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click Extension/SafariWebExtensionHandler.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/SafariWebExtensionHandler.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-click.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/video-click.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-click/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/AppDelegate.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click/Assets.xcassets/LargeIcon.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/LargeIcon.imageset/Contents.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-click/Base.lproj/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Base.lproj/Main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click/Resources/Script.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/Script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click/Resources/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/Style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Resources/css/download.css" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/css/download.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Resources/js/download.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/js/download.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-click/ViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/ViewController.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +38,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Node.js.content.js.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/constantine/projects/video-click&quot;,
@@ -106,7 +94,8 @@
       <workItem from="1719824920443" duration="21079000" />
       <workItem from="1719907973565" duration="3717000" />
       <workItem from="1719951357570" duration="2385000" />
-      <workItem from="1720101376726" duration="4868000" />
+      <workItem from="1720101376726" duration="11956000" />
+      <workItem from="1720171144488" duration="5902000" />
     </task>
     <task id="LOCAL-00001" summary="Add tailwind instead of old styles">
       <option name="closed" value="true" />
@@ -188,7 +177,31 @@
       <option name="project" value="LOCAL" />
       <updated>1719953759433</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add icons">
+      <option name="closed" value="true" />
+      <created>1720106681722</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1720106681722</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add icons(missed)">
+      <option name="closed" value="true" />
+      <created>1720106702087</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1720106702087</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Delegate resources">
+      <option name="closed" value="true" />
+      <created>1720106772613</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1720106772613</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +229,9 @@
     <MESSAGE value="Add user defaults function" />
     <MESSAGE value="Add script to browse folder" />
     <MESSAGE value="Change window size and styling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change window size and styling" />
+    <MESSAGE value="Add icons" />
+    <MESSAGE value="Add icons(missed)" />
+    <MESSAGE value="Delegate resources" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delegate resources" />
   </component>
 </project>
