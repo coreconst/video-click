@@ -33,7 +33,28 @@ func shell(_ command: String, completion: @escaping (String) -> Void) {
 
 var timer: Timer?
 
-// Функція для перевірки розміру файлу кожні 10 секунд
+func startMonitoringFileSize(filePath: String, url: String, webView: WKWebView) {
+    timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { _ in
+        if let fileSize = getFileSize(atPath: filePath) {
+            let formattedSize = formatFileSize(fileSize)
+            webView.evaluateJavaScript("updateSize('\(formattedSize)', '\(url)')")
+            print("Current file size: \(fileSize) bytes")
+        } else {
+            print("File not found or unable to get size.")
+        }
+    }
+}
+
+func startDownload(path: String, url: String, fileName: String, webView: WKWebView) {
+    shell("cd \(path) && ffmpeg -i '\(url)' -c copy '\(fileName)'.mp4") { output in
+        webView.evaluateJavaScript("stopDownload('\(url)')")
+        timer?.invalidate()
+        timer = nil
+        print("Download completed.")
+        
+        removeUrlFromUserDefaults(url);
+    }
+}
 
 func getFileSize(atPath path: String) -> UInt64? {
     do {
