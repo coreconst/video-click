@@ -31,25 +31,39 @@ func shell(_ command: String, completion: @escaping (String) -> Void) {
     }
 }
 
-var timer: Timer?
+var timers: [String: Timer] = [:]
 
 func startMonitoringFileSize(filePath: String, url: String, webView: WKWebView) {
-    timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { _ in
-        if let fileSize = getFileSize(atPath: filePath) {
-            let formattedSize = formatFileSize(fileSize)
-            webView.evaluateJavaScript("updateSize('\(formattedSize)', '\(url)')")
-            print("Current file size: \(fileSize) bytes")
-        } else {
-            print("File not found or unable to get size.")
+    if timers[url] != nil {
+            return
         }
+    
+    let timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { [weak webView] _ in
+            if let fileSize = getFileSize(atPath: filePath) {
+                let formattedSize = formatFileSize(fileSize)
+                webView?.evaluateJavaScript("updateSize('\(formattedSize)', '\(url)')")
+                print("Current file size: \(fileSize) bytes")
+            } else {
+                // Якщо файл не знайдено або не вдалося отримати розмір, зупиняємо таймер
+                stopMonitoringFileSize(url: url)
+                print("File not found or unable to get size.")
+            }
+        }
+    
+    timers[url] = timer
+}
+
+func stopMonitoringFileSize(url: String) {
+    if let timer = timers[url] {
+        timer.invalidate()
+        timers[url] = nil
     }
 }
 
 func startDownload(path: String, url: String, fileName: String, webView: WKWebView) {
     shell("cd \(path) && ffmpeg -i '\(url)' -c copy '\(fileName)'.mp4") { output in
         webView.evaluateJavaScript("stopDownload('\(url)')")
-        timer?.invalidate()
-        timer = nil
+        stopMonitoringFileSize(url: url)
         print("Download completed.")
         
         removeUrlFromUserDefaults(url);
