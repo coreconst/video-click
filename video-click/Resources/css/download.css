@@ -19,7 +19,7 @@
     flex-direction: column;
     row-gap: 0.75rem;
     height: 300px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .require-name{
@@ -33,6 +33,7 @@
   box-sizing: border-box;
   padding: 10px 15px;
   background-color: #ffffff;
+    border: 1px solid rgb(121, 121, 121);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   /*position: relative;*/
   overflow: hidden;
@@ -62,10 +63,10 @@
   align-items: flex-start;
   /*flex-grow: 1;*/
   overflow: hidden;
-/*  width: 275px;*/
+  width: 100%;
 }
 .file-name,
-.file-url {
+.file-url{
   margin: 0;
   cursor: default;
 }
@@ -86,6 +87,32 @@
   font-size: 14px;
   color: #555;
 }
+
+.file-title{
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.file-size{
+    color: black;
+    font-size: 24px;
+    text-align: center;
+}
+
+.justify-files{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.bg-gray{
+    background-color: #b5b5b5;
+}
+
 .cross-icon {
     cursor: pointer;
     padding: 3px;
@@ -120,5 +147,40 @@
 
 .sync:hover{
     background-color: rgb(209 213 219);
+}
+
+
+.animate {
+    animation-name: spin;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+.arc {
+    --b: 5px; /* the boder thickness */
+    --a: 240deg; /* control the progression */
+
+    width: 20px;
+    aspect-ratio: 1;
+    padding: var(--b);
+    border-radius: 50%;
+    background: #c0d860;
+    --_g:/var(--b) var(--b) no-repeat
+    radial-gradient(50% 50%,#000 97%,#0000);
+    mask: top var(--_g),
+    calc(50% + 50%*sin(var(--a)))
+    calc(50% - 50%*cos(var(--a))) var(--_g),
+    linear-gradient(#0000 0 0) content-box intersect,
+    conic-gradient(#000 var(--a),#0000 0);
 }
 

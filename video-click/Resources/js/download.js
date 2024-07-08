@@ -1,5 +1,7 @@
 let syncButton = document.getElementsByClassName('sync')[0];
 
+let urlsWithCard = [];
+
 let requestObj = {
     action: "",
     url: "",
@@ -13,9 +15,38 @@ function showPath(dir){
     dirPath.classList.remove("text-red");
 }
 
+function startDownload(card, fileName){
+    let div = document.createElement("div");
+    div.classList.add("arc");
+    div.classList.add("animate");
+    card.classList.add("bg-gray");
+
+    let downloadContainer = card.getElementsByClassName("download-container")[0];
+    downloadContainer.append(div);
+
+    let fileTitle = card.getElementsByClassName("file-title")[0];
+    fileTitle.innerHTML = fileName;
+    fileTitle.classList.remove("hidden");
+
+    card.getElementsByClassName("file-size")[0].classList.remove('hidden');
+}
+
+function stopDownload(url){
+    let card = urlsWithCard[url];
+    card.getElementsByClassName('animate')[0].classList.add('hidden');
+    card.getElementsByClassName("file-size")[0].innerText = 'Done';
+}
+
+function updateSize(size, url)
+{
+    let fileSize = urlsWithCard[url].getElementsByClassName("file-size")[0];
+    fileSize.classList.remove("hidden");
+    fileSize.innerHTML = size;
+}
+
 document.getElementsByClassName('browse-button')[0].onclick = function(){
     requestObj.action = "browse";
-    webkit.messageHandlers.controller.postMessage(requestObj);
+    webkit.messageHandlers.controller.postMessage(JSON.stringify(requestObj));
 }
 
 let allUrls = [];
@@ -50,6 +81,11 @@ function receiveUrls(urls) {
                 if(fileName.value.length > 0){
                     requireFileName.classList.add("hidden");
                     download(url, fileName.value);
+                    downloadIcon.classList.add('hidden');
+                    fileName.classList.add('hidden');
+                    crossIcon.classList.add('hidden');
+                    card.getElementsByClassName('file-url')[0].classList.add('hidden');
+                    startDownload(card, fileName.value);
                 } else {
                     requireFileName.innerText = "File name is require";
                     requireFileName.classList.remove("hidden");
@@ -60,6 +96,7 @@ function receiveUrls(urls) {
         };
         
         cards.append(card);
+        urlsWithCard[url] = card;
     }
     allUrls = urls;
 }
