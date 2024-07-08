@@ -60,12 +60,7 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
         if(action == "remove"){
             let url = data.url
             
-            let urlArrayIndex = urls.firstIndex(of: url);
-            
-            if(urlArrayIndex != nil){
-                urls.remove(at: urlArrayIndex!)
-                setUserDefaults(data: urls, forKey: "sharedMessage")
-            }
+            removeUrlFromUserDefaults(url);
             return;
         }
         
@@ -76,7 +71,11 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
             let path = getUserDefaults("savedDirectoryPath") as! String
             
             if(!path.isEmpty && !url.isEmpty){
-//                print(shell("cd \(path) && ffmpeg -i '\(url)' -c copy '\(fileName)'.mp4"))
+                
+                startDownload(path: path, url: url, fileName: fileName)
+                startMonitoringFileSize(filePath: "\(path)/\(fileName).mp4", url: url)
+                
+                print("This will print immediately without waiting for the shell command to finish")
             }
             return;
         }
@@ -126,5 +125,29 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
         let dir = path.split(separator: "/")
         webView.evaluateJavaScript("showPath('\(dir[dir.count - 1])')")
     }
+    
+    func startMonitoringFileSize(filePath: String, url: String) {
+        timer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { _ in
+            if let fileSize = getFileSize(atPath: filePath) {
+                let formattedSize = formatFileSize(fileSize)
+                self.webView.evaluateJavaScript("updateSize('\(formattedSize)', '\(url)')")
+                print("Current file size: \(fileSize) bytes")
+            } else {
+                print("File not found or unable to get size.")
+            }
+        }
+    }
+    
+    func startDownload(path: String, url: String, fileName: String) {
+        shell("cd \(path) && ffmpeg -i '\(url)' -c copy '\(fileName)'.mp4") { output in
+            self.webView.evaluateJavaScript("stopDownload('\(url)')")
+            timer?.invalidate()
+            timer = nil
+            print("Download completed.")
+            
+            removeUrlFromUserDefaults(url);
+        }
+    }
+
 
 }

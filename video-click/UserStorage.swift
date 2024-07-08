@@ -27,3 +27,14 @@ func removeUserDefaults(_ forKey: String) -> Void
 {
     defaults?.removeObject(forKey: forKey)
 }
+
+func removeUrlFromUserDefaults(_ url: String) -> Void
+{
+    var urls = getUserDefaults("sharedMessage") as! Array<String>
+    let urlArrayIndex = urls.firstIndex(of: url);
+    
+    if(urlArrayIndex != nil){
+        urls.remove(at: urlArrayIndex!)
+        setUserDefaults(data: urls, forKey: "sharedMessage")
+    }
+}

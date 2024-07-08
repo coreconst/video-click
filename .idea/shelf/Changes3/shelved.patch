@@ -1,0 +1,174 @@
+Index: video-click/ViewController.swift
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>//\n//  ViewController.swift\n//  video-click\n//\n//  Created by constantine on 14.06.2024.\n//\n\nimport Cocoa\nimport SafariServices\nimport WebKit\nimport SwiftUI\n\nlet extensionBundleIdentifier = \"com.pk.video-click.Extension\"\n\nclass ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHandler {\n\n    @IBOutlet var webView: WKWebView!\n\n    override func viewDidLoad() {\n        super.viewDidLoad()\n\n        self.webView.navigationDelegate = self\n\n        self.webView.configuration.userContentController.add(self, name: \"controller\")\n\n        self.webView.loadFileURL(Bundle.main.url(forResource: \"Main\", withExtension: \"html\")!, allowingReadAccessTo: Bundle.main.resourceURL!)\n    }\n\n    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {\n        SFSafariExtensionManager.getStateOfSafariExtension(withIdentifier: extensionBundleIdentifier) { (state, error) in\n            guard let state = state, error == nil else {\n                // Insert code to inform the user that something went wrong.\n                return\n            }\n            \n            DispatchQueue.main.async {\n                let path = (getUserDefaults(\"savedDirectoryPath\") as! String);\n//                let urls = getUserDefaults(\"sharedMessage\") as! Array<String>;\n                \n                if !(path.isEmpty){\n                    self.sendDirectoryPathToJS(path)\n                }\n            }\n        }\n    }\n\n\n    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {\n        \n        let data = parseJsonData(jsonData: (message.body as! String))\n        let action = data.action;\n        \n        if(action == \"browse\"){\n            openDirectoryPicker()\n            return;\n        }\n            \n        var urls = getUserDefaults(\"sharedMessage\") as! Array<String>\n        \n        if(action == \"remove\"){\n            let url = data.url\n            \n            let urlArrayIndex = urls.firstIndex(of: url);\n            \n            if(urlArrayIndex != nil){\n                urls.remove(at: urlArrayIndex!)\n                setUserDefaults(data: urls, forKey: \"sharedMessage\")\n            }\n            return;\n        }\n        \n        if(action == \"download\"){\n            let fileName = data.name;\n            let url = data.url;\n           \n            let path = getUserDefaults(\"savedDirectoryPath\") as! String\n            \n            if(!path.isEmpty && !url.isEmpty){\n//                print(shell(\"cd \\(path) && ffmpeg -i '\\(url)' -c copy '\\(fileName)'.mp4\"))\n            }\n            return;\n        }\n        \n        if (action == \"sync\") {\n            syncUrls();\n        }\n    }\n    \n    private func syncUrls(){\n        let urls = getUserDefaults(\"sharedMessage\") as! Array<String>;\n\n        if !urls.isEmpty {\n            do {\n                let jsonData = try JSONSerialization.data(withJSONObject: urls, options: [])\n                if let jsonString = String(data: jsonData, encoding: .utf8) {\n                    let jsCode = \"receiveUrls(\\(jsonString));\"\n                    webView.evaluateJavaScript(jsCode, completionHandler: { (result, error) in\n                        if let error = error {\n                            print(\"Error executing JavaScript: \\(error)\")\n                        }\n                    })\n                }\n            } catch {\n                print(\"Error serializing JSON: \\(error)\")\n            }\n        }\n    }\n    \n    private func openDirectoryPicker() {\n            let dialog = NSOpenPanel()\n            dialog.title = \"Choose a directory\"\n            dialog.canChooseDirectories = true\n            dialog.canChooseFiles = false\n            dialog.allowsMultipleSelection = false\n            \n            if dialog.runModal() == .OK {\n                if let url = dialog.url {\n                    let path = url.path\n                    setUserDefaults(data: path, forKey: \"savedDirectoryPath\")\n                    sendDirectoryPathToJS(path)\n                }\n            }\n        }\n        \n    private func sendDirectoryPathToJS(_ path: String) {\n        let dir = path.split(separator: \"/\")\n        webView.evaluateJavaScript(\"showPath('\\(dir[dir.count - 1])')\")\n    }\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/video-click/ViewController.swift b/video-click/ViewController.swift
+--- a/video-click/ViewController.swift	(revision b86d45aceb044cf4f3209087a79c6e567fcd633f)
++++ b/video-click/ViewController.swift	(date 1720179562162)
+@@ -37,9 +37,9 @@
+                 let path = (getUserDefaults("savedDirectoryPath") as! String);
+ //                let urls = getUserDefaults("sharedMessage") as! Array<String>;
+                 
+-                if !(path.isEmpty){
+-                    self.sendDirectoryPathToJS(path)
+-                }
++//                if !(path.isEmpty){
++//                    self.sendDirectoryPathToJS(path)
++//                }
+             }
+         }
+     }
+@@ -47,43 +47,53 @@
+ 
+     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+         
+-        let data = parseJsonData(jsonData: (message.body as! String))
+-        let action = data.action;
++//        let data = parseJsonData(jsonData: (message.body as! String))
++//        let action = data.action;
+         
+-        if(action == "browse"){
+-            openDirectoryPicker()
+-            return;
+-        }
+-            
+-        var urls = getUserDefaults("sharedMessage") as! Array<String>
++        print(message.body);
+         
+-        if(action == "remove"){
+-            let url = data.url
+-            
+-            let urlArrayIndex = urls.firstIndex(of: url);
+-            
+-            if(urlArrayIndex != nil){
+-                urls.remove(at: urlArrayIndex!)
+-                setUserDefaults(data: urls, forKey: "sharedMessage")
+-            }
+-            return;
++//        if(action == "browse"){
++//            print(data)
++//            print("hello")
++//            openDirectoryPicker()
++//            return;
+         }
+-        
+-        if(action == "download"){
+-            let fileName = data.name;
+-            let url = data.url;
+-           
+-            let path = getUserDefaults("savedDirectoryPath") as! String
+             
+-            if(!path.isEmpty && !url.isEmpty){
+-//                print(shell("cd \(path) && ffmpeg -i '\(url)' -c copy '\(fileName)'.mp4"))
+-            }
+-            return;
+-        }
+-        
+-        if (action == "sync") {
+-            syncUrls();
+-        }
++//        var urls = getUserDefaults("sharedMessage") as! Array<String>
++//        
++//        if(action == "remove"){
++//            let url = data.url
++//            
++//            let urlArrayIndex = urls.firstIndex(of: url);
++//            
++//            if(urlArrayIndex != nil){
++//                urls.remove(at: urlArrayIndex!)
++//                setUserDefaults(data: urls, forKey: "sharedMessage")
++//            }
++//            return;
++//        }
++//        
++//        if(action == "download"){
++//            let fileName = data.name;
++//            let url = data.url;
++//           
++//            let path = getUserDefaults("savedDirectoryPath") as! String
++//            
++//            if(!path.isEmpty && !url.isEmpty){
++//                shell("cd \(path) && ffmpeg -i '\(url)' -c copy '\(fileName)'.mp4") { output in
++//                    print("Command output: \(output)")
++//                    // Update UI or handle completion
++//                }
++//                
++//                print("This will print immediately without waiting for the shell command to finish")
++////                print(shell("cd \(path) && ffmpeg -i '\(url)' -c copy '\(fileName)'.mp4"))
++//            }
++//            return;
++//        }
++//        
++//        if (action == "sync") {
++//            syncUrls();
++//        }
+     }
+     
+     private func syncUrls(){
+@@ -94,11 +104,11 @@
+                 let jsonData = try JSONSerialization.data(withJSONObject: urls, options: [])
+                 if let jsonString = String(data: jsonData, encoding: .utf8) {
+                     let jsCode = "receiveUrls(\(jsonString));"
+-                    webView.evaluateJavaScript(jsCode, completionHandler: { (result, error) in
+-                        if let error = error {
+-                            print("Error executing JavaScript: \(error)")
+-                        }
+-                    })
++//                    webView.evaluateJavaScript(jsCode, completionHandler: { (result, error) in
++//                        if let error = error {
++//                            print("Error executing JavaScript: \(error)")
++//                        }
++//                    })
+                 }
+             } catch {
+                 print("Error serializing JSON: \(error)")
+@@ -106,25 +116,25 @@
+         }
+     }
+     
+-    private func openDirectoryPicker() {
+-            let dialog = NSOpenPanel()
+-            dialog.title = "Choose a directory"
+-            dialog.canChooseDirectories = true
+-            dialog.canChooseFiles = false
+-            dialog.allowsMultipleSelection = false
+-            
+-            if dialog.runModal() == .OK {
+-                if let url = dialog.url {
+-                    let path = url.path
+-                    setUserDefaults(data: path, forKey: "savedDirectoryPath")
+-                    sendDirectoryPathToJS(path)
+-                }
+-            }
+-        }
+-        
+-    private func sendDirectoryPathToJS(_ path: String) {
+-        let dir = path.split(separator: "/")
+-        webView.evaluateJavaScript("showPath('\(dir[dir.count - 1])')")
+-    }
++//    private func openDirectoryPicker() {
++//            let dialog = NSOpenPanel()
++//            dialog.title = "Choose a directory"
++//            dialog.canChooseDirectories = true
++//            dialog.canChooseFiles = false
++//            dialog.allowsMultipleSelection = false
++//            
++//            if dialog.runModal() == .OK {
++//                if let url = dialog.url {
++//                    let path = url.path
++//                    setUserDefaults(data: path, forKey: "savedDirectoryPath")
++//                    sendDirectoryPathToJS(path)
++//                }
++//            }
++//        }
++//        
++//    private func sendDirectoryPathToJS(_ path: String) {
++//        let dir = path.split(separator: "/")
++//        webView.evaluateJavaScript("showPath('\(dir[dir.count - 1])')")
++//    }
++
+ 
+-}

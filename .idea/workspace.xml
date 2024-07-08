@@ -4,20 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de7f0f72-15b1-40ec-b15e-7125e4fe8ffb" name="Changes" comment="Delegate resources">
-      <change afterPath="$PROJECT_DIR$/video-click/JsonParser.swift" afterDir="false" />
+    <list default="true" id="de7f0f72-15b1-40ec-b15e-7125e4fe8ffb" name="Changes" comment="Change download style">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/background.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/popup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/popup.html" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/popup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/popup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click Extension/SafariWebExtensionHandler.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/SafariWebExtensionHandler.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/video-click.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-click/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/AppDelegate.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-click/Base.lproj/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Base.lproj/Main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-click/Resources/css/download.css" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/css/download.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-click/Resources/js/download.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/js/download.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Scripting.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Scripting.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-click/ViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/ViewController.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +88,7 @@
       <workItem from="1719907973565" duration="3717000" />
       <workItem from="1719951357570" duration="2385000" />
       <workItem from="1720101376726" duration="11956000" />
-      <workItem from="1720171144488" duration="5902000" />
+      <workItem from="1720171144488" duration="16221000" />
     </task>
     <task id="LOCAL-00001" summary="Add tailwind instead of old styles">
       <option name="closed" value="true" />
@@ -201,7 +194,63 @@
       <option name="project" value="LOCAL" />
       <updated>1720106772613</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Change request data type to json">
+      <option name="closed" value="true" />
+      <created>1720178439163</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1720178439163</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Improve url scraper handle">
+      <option name="closed" value="true" />
+      <created>1720178516523</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1720178516523</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Change missed conf files">
+      <option name="closed" value="true" />
+      <created>1720178549394</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1720178549394</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Change web extension response(missed)">
+      <option name="closed" value="true" />
+      <created>1720178578689</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1720178578689</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Change popup style">
+      <option name="closed" value="true" />
+      <created>1720178607100</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1720178607100</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Add jsonparser file(missed)">
+      <option name="closed" value="true" />
+      <created>1720178624133</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1720178624133</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Change download style">
+      <option name="closed" value="true" />
+      <created>1720178654301</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1720178654301</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,6 +281,13 @@
     <MESSAGE value="Add icons" />
     <MESSAGE value="Add icons(missed)" />
     <MESSAGE value="Delegate resources" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delegate resources" />
+    <MESSAGE value="Change request data type to json" />
+    <MESSAGE value="Improve url scraper handle" />
+    <MESSAGE value="Change missed conf files" />
+    <MESSAGE value="Change web extension response(missed)" />
+    <MESSAGE value="Change popup style" />
+    <MESSAGE value="Add jsonparser file(missed)" />
+    <MESSAGE value="Change download style" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change download style" />
   </component>
 </project>
