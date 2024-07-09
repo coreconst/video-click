@@ -119,3 +119,29 @@ function download(url, name){
 
 
 syncButton.addEventListener("click", syncUrl);
+
+let indexing = document.getElementsByClassName('indexing')[0];
+
+indexing.onclick = function (){
+    let keyword = document.getElementsByClassName('index-keyword')[0];
+    let number = document.getElementsByClassName('index-number')[0];
+    let cards = document.getElementsByClassName('card');
+
+    let startIndex= (number.value.length > 0 && Number.isFinite(+(number.value))) ? (+(number.value) - 1) : 0;
+
+    if(keyword.value.length > 0 && cards.length > 1){
+        for(let i = 1; i <= cards.length; i++){
+            let card = cards[i];
+            card.getElementsByClassName('file-name')[0].value = keyword.value + (i + startIndex);
+        }
+    }
+}
+
+let downloadAll = document.getElementsByClassName('download-all')[0];
+downloadAll.onclick = function (){
+    // let event = new Event("click");
+    let cards = document.getElementsByClassName('card');
+    for(let card of cards){
+        card.getElementsByClassName('download-icon')[0].dispatchEvent(new Event('click'));
+    }
+}
