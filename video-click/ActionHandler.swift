@@ -7,6 +7,7 @@
 
 import Foundation
 import WebKit
+import Cocoa
 
 struct ActionHandler
 {
@@ -39,6 +40,8 @@ struct ActionHandler
     }
     
     func download(){
+        if(!checkIfBrewAndFfmpegInstalled().ffmpeg) {return}
+        
         let fileName = data.name;
         let url = data.url;
        
@@ -48,7 +51,7 @@ struct ActionHandler
             startDownload(path: path, url: url, fileName: fileName, webView: self.webView)
             startMonitoringFileSize(filePath: "\(path)/\(fileName).mp4", url: url, webView: self.webView)
             
-            print("This will print immediately without waiting for the shell command to finish")
+//            print("This will print immediately without waiting for the shell command to finish")
         }
     }
     
@@ -72,5 +75,4 @@ struct ActionHandler
         let dir = path.split(separator: "/")
         webView.evaluateJavaScript("showPath('\(dir[dir.count - 1])')")
     }
-    
 }

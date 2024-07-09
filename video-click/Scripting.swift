@@ -11,24 +11,47 @@ import WebKit
 
 func shell(_ command: String, completion: @escaping (String) -> Void) {
     DispatchQueue.global(qos: .background).async {
-        let task = Process()
-        let pipe = Pipe()
-        
-        task.standardOutput = pipe
-        task.standardError = pipe
-        task.arguments = ["-c", command]
-        task.launchPath = "/bin/zsh"
-        task.standardInput = nil
-        task.environment = ["PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin"]
-        task.launch()
-        
-        let data = pipe.fileHandleForReading.readDataToEndOfFile()
-        let output = String(data: data, encoding: .utf8)!
+        let output = syncShell(command);
         
         DispatchQueue.main.async {
             completion(output)
         }
     }
+}
+
+@discardableResult
+func syncShell(_ command:String) -> String {
+    let task = Process()
+    let pipe = Pipe()
+    
+    task.standardOutput = pipe
+    task.standardError = pipe
+    task.arguments = ["-c", command]
+    task.launchPath = "/bin/zsh"
+    task.standardInput = nil
+    task.environment = ["PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin"]
+    task.launch()
+    
+    let data = pipe.fileHandleForReading.readDataToEndOfFile()
+    let output = String(data: data, encoding: .utf8)!
+    
+    return output
+}
+
+func checkIfBrewAndFfmpegInstalled() -> (brew: Bool, ffmpeg: Bool)
+{
+    let brew: String = syncShell("which brew")
+    
+    if(brew.contains("not found")){
+        return (false, false)
+    }else{
+        let ffmpeg: String = syncShell("which ffmpeg")
+        if(ffmpeg.contains("not found")){
+            return (true, false)
+        }
+        return (true, true)
+    }
+    
 }
 
 var timers: [String: Timer] = [:]
@@ -38,15 +61,14 @@ func startMonitoringFileSize(filePath: String, url: String, webView: WKWebView) 
             return
         }
     
-    let timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { [weak webView] _ in
+    let timer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { [weak webView] _ in
             if let fileSize = getFileSize(atPath: filePath) {
                 let formattedSize = formatFileSize(fileSize)
                 webView?.evaluateJavaScript("updateSize('\(formattedSize)', '\(url)')")
-                print("Current file size: \(fileSize) bytes")
+//                print("Current file size: \(fileSize) bytes")
             } else {
-                // Якщо файл не знайдено або не вдалося отримати розмір, зупиняємо таймер
                 stopMonitoringFileSize(url: url)
-                print("File not found or unable to get size.")
+//                print("File not found or unable to get size.")
             }
         }
     
@@ -64,7 +86,7 @@ func startDownload(path: String, url: String, fileName: String, webView: WKWebVi
     shell("cd \(path) && ffmpeg -i '\(url)' -c copy '\(fileName)'.mp4") { output in
         webView.evaluateJavaScript("stopDownload('\(url)')")
         stopMonitoringFileSize(url: url)
-        print("Download completed.")
+//        print("Download completed.")
         
         removeUrlFromUserDefaults(url);
     }

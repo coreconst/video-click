@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de7f0f72-15b1-40ec-b15e-7125e4fe8ffb" name="Changes" comment="Add background downloading">
-      <change afterPath="$PROJECT_DIR$/video-click/ActionHandler.swift" afterDir="false" />
+    <list default="true" id="de7f0f72-15b1-40ec-b15e-7125e4fe8ffb" name="Changes" comment="Fix timer bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/video-click.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click.xcodeproj/xcuserdata/constantine.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" afterPath="$PROJECT_DIR$/video-click.xcodeproj/xcuserdata/constantine.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click/JsonParser.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/JsonParser.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/ActionHandler.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/ActionHandler.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/AppDelegate.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Base.lproj/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Base.lproj/Main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Resources/Script.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/Script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Resources/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/Style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Resources/css/download.css" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/css/download.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Resources/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/css/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Resources/js/download.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/js/download.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-click/Scripting.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Scripting.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-click/ViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/ViewController.swift" afterDir="false" />
     </list>
@@ -89,7 +93,8 @@
       <workItem from="1719951357570" duration="2385000" />
       <workItem from="1720101376726" duration="11956000" />
       <workItem from="1720171144488" duration="16221000" />
-      <workItem from="1720427533439" duration="2328000" />
+      <workItem from="1720427533439" duration="18290000" />
+      <workItem from="1720514603384" duration="9968000" />
     </task>
     <task id="LOCAL-00001" summary="Add tailwind instead of old styles">
       <option name="closed" value="true" />
@@ -267,7 +272,23 @@
       <option name="project" value="LOCAL" />
       <updated>1720427741816</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Refactor view controller action handle">
+      <option name="closed" value="true" />
+      <created>1720435130899</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1720435130900</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Fix timer bugs">
+      <option name="closed" value="true" />
+      <created>1720437550549</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1720437550549</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,6 +328,8 @@
     <MESSAGE value="Change download style" />
     <MESSAGE value="Add animation while downloading" />
     <MESSAGE value="Add background downloading" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add background downloading" />
+    <MESSAGE value="Refactor view controller action handle" />
+    <MESSAGE value="Fix timer bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix timer bugs" />
   </component>
 </project>

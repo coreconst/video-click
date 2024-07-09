@@ -34,6 +34,12 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
             }
             
             DispatchQueue.main.async {
+                let tools = checkIfBrewAndFfmpegInstalled()
+                print(tools)
+                if(!tools.brew || !tools.ffmpeg){
+                    webView.evaluateJavaScript("suggestInstallTools(\(tools.brew), \(tools.ffmpeg))")
+                }
+                
                 let path = (getUserDefaults("savedDirectoryPath") as! String);
                 
                 if !(path.isEmpty){
