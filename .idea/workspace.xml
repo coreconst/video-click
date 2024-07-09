@@ -4,14 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de7f0f72-15b1-40ec-b15e-7125e4fe8ffb" name="Changes" comment="Add indexing and download all event">
-      <change beforePath="$PROJECT_DIR$/video-click/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/AppDelegate.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click/Base.lproj/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Base.lproj/Main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click/Resources/Script.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/Script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click/Resources/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/Style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click/Resources/css/download.css" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/css/download.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click/Resources/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/css/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-click/Resources/js/download.js" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Resources/js/download.js" afterDir="false" />
+    <list default="true" id="de7f0f72-15b1-40ec-b15e-7125e4fe8ffb" name="Changes" comment="Change download page styling">
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/icon-1024.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/icon-128.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/icon-16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/icon-256 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/icon-256.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/icon-32 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/icon-32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/icon-512 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/icon-512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/icon-64.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/LargeIcon.imageset/icon-1024 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/LargeIcon.imageset/icon-1024 2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/LargeIcon.imageset/icon-1024.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/images/icon-128.png" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/images/icon-128.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/images/icon-256.png" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/images/icon-256.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/images/icon-48.png" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/images/icon-48.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/images/icon-512.png" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/images/icon-512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/images/icon-64.png" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/images/icon-64.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/images/icon-96.png" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/images/icon-96.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click Extension/Resources/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/video-click Extension/Resources/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/1024.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/128.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/256 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/256.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/32 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/512 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/64.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Assets.xcassets/LargeIcon.imageset/128.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Assets.xcassets/LargeIcon.imageset/256.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Assets.xcassets/LargeIcon.imageset/512 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/Assets.xcassets/LargeIcon.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/Assets.xcassets/LargeIcon.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-click/ViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/video-click/ViewController.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,23 +59,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Node.js.content.js.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/constantine/projects/video-click&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.content.js.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/constantine/projects/video-click/video-click Extension/Resources/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.fileTypes",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/video-click Extension/Resources/images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/renderer/src/css" />
       <recent name="$PROJECT_DIR$/src/renderer/src/assets" />
@@ -90,7 +123,7 @@
       <workItem from="1720101376726" duration="11956000" />
       <workItem from="1720171144488" duration="16221000" />
       <workItem from="1720427533439" duration="18290000" />
-      <workItem from="1720514603384" duration="10541000" />
+      <workItem from="1720514603384" duration="13239000" />
     </task>
     <task id="LOCAL-00001" summary="Add tailwind instead of old styles">
       <option name="closed" value="true" />
@@ -300,7 +333,31 @@
       <option name="project" value="LOCAL" />
       <updated>1720535048848</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Add checking tools interface">
+      <option name="closed" value="true" />
+      <created>1720535162185</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1720535162185</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Add how it works page, change template to div">
+      <option name="closed" value="true" />
+      <created>1720535255516</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1720535255516</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Change download page styling">
+      <option name="closed" value="true" />
+      <created>1720535273702</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1720535273702</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,9 +375,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add header component to choose section" />
-    <MESSAGE value="Remove unnecessary classes" />
-    <MESSAGE value="Add style, add remove function" />
     <MESSAGE value="Add environment to scripting" />
     <MESSAGE value="Change style in main.html" />
     <MESSAGE value="Add download script handle" />
@@ -343,6 +397,9 @@
     <MESSAGE value="Fix timer bugs" />
     <MESSAGE value="Add checking of tools" />
     <MESSAGE value="Add indexing and download all event" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add indexing and download all event" />
+    <MESSAGE value="Add checking tools interface" />
+    <MESSAGE value="Add how it works page, change template to div" />
+    <MESSAGE value="Change download page styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change download page styling" />
   </component>
 </project>
