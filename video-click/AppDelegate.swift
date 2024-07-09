@@ -11,9 +11,7 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-//        let sharedDefaults = UserDefaults(suiteName: "group.com.pk.video-click")
-//        print(sharedDefaults)
-
+        
     }
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {

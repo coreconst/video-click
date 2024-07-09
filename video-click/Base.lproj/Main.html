@@ -16,7 +16,7 @@
          <div class="header-container">
             <div class="header-shell">
                 <div class="header-buttons-container">
-                    <div class="header-button how-it-works-nav">How it works</div>
+                    <div class="header-button how-it-works-nav header-active">How it works</div>
                     <div style="padding-top: 0.25rem; padding-bottom: 0.25rem;">
                         <div class="header-button-border">
                             &nbsp;
@@ -27,22 +27,88 @@
             </div>
          </div>
 
-        <div class="content">
+        <div class="how-it-works-temp content">
+            <div class="alert hidden">You need to install <span class="font-medium">Ffmpeg</span>.</div>
+            <p>Welcome to Video-Click! Follow these simple steps to download and manage your videos efficiently.</p>
+
+            <h2>Step-by-Step Guide</h2>
+
+            <div class="step">
+                <h3>1. Install Required Tools</h3>
+                <p>Ensure you have the necessary tools installed on your system, such as <code>Homebrew</code> and <code>ffmpeg</code>. If you haven't installed them yet, follow these instructions:</p>
+                <p><strong>Homebrew:</strong></p>
+                <div class="code">
+                    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+                </div>
+                <p><strong>ffmpeg:</strong></p>
+                <div class="code">
+                    brew install ffmpeg
+                </div>
+                <p>After installation, it's recommended to restart the app.</p>
+            </div>
+
+            <div class="step">
+                <h3>2. Add Video Links</h3>
+                <p>In the Safari browser popup, click the <code>Select</code> button. Then, hover the cursor over the desired video, and a <code>Save</code> button will appear in the top right corner. After saving, the button text should change to <code>Saved</code>. We can then return to the app.</p>
+            </div>
+
+            <div class="step">
+                <h3>3. Set Download Path</h3>
+                <p>Use the <code>Browse</code> button to select the directory where you want to save the downloaded videos. The selected path will be used for all future downloads.</p>
+            </div>
+
+            <div class="step">
+                <h3>4. Download Videos</h3>
+                <p>After adding the links and setting the download path, click the <code>Synchronize</code> button and download icon. Monitor the download progress directly within the app. The current file size will be updated every few seconds.</p>
+            </div>
+
+            <h2>Tips</h2>
+            <div class="tips">
+                <p>Make sure your internet connection is stable for uninterrupted downloads.</p>
+                <p>Check the download path to ensure there's enough space for the videos.</p>
+<!--                <p>Use the <code>Refresh</code> button if you encounter any issues with the current downloads.</p>-->
+            </div>
+
+            <p>We hope you enjoy using Video-Click!</p>
         </div>
 
-        <template class="how-it-works-temp">
-            <div>
-                <h2>How??</h2>
-            </div>
-        </template>
+        <div class="download-temp content hidden">
 
-        <template class="download-temp">
             <div class="require-name hidden">File name is require</div>
-            <div class="directory-path">
-                <div class="directory-name empty-dir">Select folder</div>
-                <button class="browse-button">Browse</button>
+            <div class="settings">
+                <div class="directory-path settings-card">
+                    <label>Download Path</label>
+                    <div>
+                        <div class="directory-name empty-dir">Select folder</div>
+                        <div class="browse-button settings-button">Browse</div>
+                    </div>
+                </div>
+                <div class="settings-card">
+                    <div class="index-data">
+                        <div>
+                            <label for="keyword">Keyword</label>
+                            <input id="keyword" class="index-keyword" placeholder="Simpsons" type="text">
+                        </div>
+                        <div>
+                            <label for="number">Start number</label>
+                            <input id="number" class="index-number" placeholder="1" type="text">
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="indexing settings-button">Indexing</div>
+                    </div>
+                </div>
+                <div class="settings-card">
+                    <div>
+                        <label>Download all files</label>
+                        <div class="download-all settings-button">Download</div>
+                    </div>
+                </div>
             </div>
             <div class="cards">
+                <h2 class="tip">
+                    Synchronize the saved videos to download them.
+                </h2>
                 <div class="card hidden">
                     <div class="download-container">
                         <svg
@@ -92,9 +158,9 @@
                 </div>
             </div>
             <div class="sync-container">
-                <button class="sync">Synchronize</button>
+                <button class="sync gray-button">Synchronize</button>
             </div>
-        </template>
+        </div>
     </div>
 </body>
 </html>
