@@ -1,17 +1,81 @@
-.content{
-    width: 100%;
-/*    border: 1px solid black;*/
+.settings{
     display: flex;
+    gap: 2.5rem;
+    flex-direction: row;
+    font-size: 16px;
+    justify-content: space-between;
+}
+
+.settings-card{
+    display: flex;
+    gap: 0.5rem;
     flex-direction: column;
-    margin-top: 100px;
+}
+
+.index-data{
+    /*width: 250px;*/
+    display: flex;
+    flex-direction: row;
     gap: 1.5rem;
 }
 
-.directory-path{
-    display: flex;
-    gap: 1.5rem;
-    flex-direction: row;
+.index-data input{
+    color: black;
     font-size: 16px;
+    padding: 5px 0;
+    border-width: 0 0 1px 0;
+    border-color: lightblue;
+    outline: none;
+}
+
+.index-data div{
+    display: flex;
+    flex-direction: column;
+}
+
+.index-keyword{
+    width: 150px;
+}
+
+.index-number{
+    width: 100px;
+}
+
+.settings-button{
+    background-color: #111827;
+    border: 1px solid transparent;
+    border-radius: .75rem;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 4px 4px;
+}
+
+.settings-button:hover{
+    background-color: #374151;
+}
+
+.directory-path div{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.directory-name{
+    color: #2c85e6;
+}
+
+.download-all{
+    margin-top: 0.75rem;
+}
+
+.tip{
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    right: 0px;
 }
 
 .cards{
@@ -129,26 +193,6 @@
     bottom: 0;
     margin-bottom: 75px;
 }
-
-.sync{
-    background-color: rgba(51, 51, 51, 0.05);
-    border-radius: 8px;
-    border-width: 0;
-    color: #333333;
-    cursor: pointer;
-    display: inline-block;
-    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 20px;
-    padding: 14px 18px;
-    text-align: center;
-}
-
-.sync:hover{
-    background-color: rgb(209 213 219);
-}
-
 
 .animate {
     animation-name: spin;

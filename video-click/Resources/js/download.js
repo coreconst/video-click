@@ -53,7 +53,7 @@ let allUrls = [];
 
 function receiveUrls(urls) {
     let cards = document.getElementsByClassName('cards')[0];
-    
+    document.getElementsByClassName('tip')[0].classList.add('hidden');
     for(let i = 0; i < urls.length; i++){
         let url = urls[i];
         if(allUrls.includes(url)){
