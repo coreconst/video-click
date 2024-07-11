@@ -127,12 +127,15 @@ indexing.onclick = function (){
     let number = document.getElementsByClassName('index-number')[0];
     let cards = document.getElementsByClassName('card');
 
-    let startIndex= (number.value.length > 0 && Number.isFinite(+(number.value))) ? (+(number.value) - 1) : 0;
+    let startIndex = (number.value.length > 0 && Number.isFinite(+(number.value))) ? ((+number.value) - 1) : 0;
 
     if(keyword.value.length > 0 && cards.length > 1){
-        for(let i = 1; i <= cards.length; i++){
-            let card = cards[i];
+        let i = 1;
+        for(let card of cards){
+            if(card.classList.contains("hidden")) continue;
             card.getElementsByClassName('file-name')[0].value = keyword.value + (i + startIndex);
+            i++;
+            
         }
     }
 }
