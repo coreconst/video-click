@@ -1,6 +1,6 @@
-# Video Downloader GUI for FFmpeg
+# Video Click
 
-This project is a graphical interface for FFmpeg that allows users to retrieve the necessary URL from supported websites and synchronize it with the application to download video files.
+This project is a graphical interface for FFmpeg that allows users to retrieve the necessary URL from websites and synchronize it with the application to download video files.
 
 ## Limitations
 
