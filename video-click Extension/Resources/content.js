@@ -3,7 +3,7 @@ browser.runtime.onMessage.addListener((request) => {
         let videos = document.querySelectorAll('video');
         checkValidElements(videos);
 
-        let iframes = document.querySelectorAll('iframe');
+        let iframes = specialUrlCheck() ?? document.querySelectorAll('iframe');
         checkValidElements(iframes, true);
     }
 });
@@ -23,6 +23,7 @@ function checkValidElements(elements, itsIframes = false)
                 button.style.visibility = 'hidden';
                 button.style.zIndex = '999';
                 button.style.color = 'black';
+                button.classList.add('video-click-save-button');
                 button.innerHTML = 'Save';
 
                 button.onclick = function(){
@@ -54,9 +55,28 @@ function containFormats(src, itsIframes = false){
     if(itsIframes) return true;
 
     const formats = ['.mp4', '.webm', '.mov', '.mkv', '.m3u8'];
-    for(format in formats){
+    for(let format in formats){
         if(src.includes(format)) return true;
     }
 
     return false;
 }
+
+function specialUrlCheck()
+{
+    // temporary solution
+    const urlOrigin = window.location.origin;
+    switch (urlOrigin){
+        case 'https://uaserials.pro':  // shadow root
+            let shadowPlayer= document.querySelector('player-control').shadowRoot;
+            return [shadowPlayer.querySelector('iframe')];
+        case 'https://uaserial.com': // double document nesting
+        case 'https://uaserial.tv':
+            let iframe = document.querySelector('iframe').contentDocument;
+            return [iframe.getElementsByTagName('iframe')[0]];
+        default:
+            return null;
+    }
+}
+
+
