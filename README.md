@@ -8,6 +8,13 @@ This project is a graphical interface for FFmpeg that allows users to retrieve t
 - **Blob URLs Unsupported:** At this time, the application cannot retrieve URLs from `blob:` schemes.
 - **Limited to macOS:** The app is only available on macOS for now.
 
+## Download
+
+[![Download App](https://img.shields.io/badge/Download-v0.1.0-blue)](https://github.com/coreconst/video-click/releases/download/v0.1.0-beta/video-click.app.zip)
+
+---
+
+
 ## How to Download a Video
 
 1. **Select Video:**
