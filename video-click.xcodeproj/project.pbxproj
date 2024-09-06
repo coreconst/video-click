@@ -10,6 +10,8 @@
 		AD8870B92C3BE5A9007E4007 /* ActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8870B82C3BE5A9007E4007 /* ActionHandler.swift */; };
 		AD8870BB2C3BEDCA007E4007 /* Scripting.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8870BA2C3BEDCA007E4007 /* Scripting.swift */; };
 		AD8AF7282C8B3D06001167F1 /* contents in Resources */ = {isa = PBXBuildFile; fileRef = AD8AF7272C8B3D06001167F1 /* contents */; };
+		AD8AF72A2C8B469E001167F1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AD8AF7292C8B469E001167F1 /* README.md */; };
+		AD8AF72B2C8B469E001167F1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AD8AF7292C8B469E001167F1 /* README.md */; };
 		ADB3A71A2C1C77B600054C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB3A7192C1C77B600054C42 /* AppDelegate.swift */; };
 		ADB3A71E2C1C77B600054C42 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = ADB3A71D2C1C77B600054C42 /* Base */; };
 		ADB3A7202C1C77B600054C42 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB3A71F2C1C77B600054C42 /* Icon.png */; };
@@ -73,6 +75,7 @@
 		AD8870B82C3BE5A9007E4007 /* ActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionHandler.swift; sourceTree = "<group>"; };
 		AD8870BA2C3BEDCA007E4007 /* Scripting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scripting.swift; sourceTree = "<group>"; };
 		AD8AF7272C8B3D06001167F1 /* contents */ = {isa = PBXFileReference; lastKnownFileType = folder; path = contents; sourceTree = "<group>"; };
+		AD8AF7292C8B469E001167F1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		ADB3A7162C1C77B600054C42 /* video-click.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "video-click.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB3A7192C1C77B600054C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADB3A71D2C1C77B600054C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
@@ -125,6 +128,7 @@
 		ADB3A70D2C1C77B600054C42 = {
 			isa = PBXGroup;
 			children = (
+				AD8AF7292C8B469E001167F1 /* README.md */,
 				ADB3A7182C1C77B600054C42 /* video-click */,
 				ADB3A7362C1C77BC00054C42 /* video-click Extension */,
 				ADB3A7172C1C77B600054C42 /* Products */,
@@ -292,6 +296,7 @@
 				ADE621092C36E38A001E22D5 /* js in Resources */,
 				ADB3A7222C1C77B600054C42 /* Style.css in Resources */,
 				ADB3A72B2C1C77BB00054C42 /* Assets.xcassets in Resources */,
+				AD8AF72A2C8B469E001167F1 /* README.md in Resources */,
 				ADE621062C36E1A0001E22D5 /* css in Resources */,
 				ADB3A7292C1C77B600054C42 /* Base in Resources */,
 			);
@@ -303,6 +308,7 @@
 			files = (
 				ADB3A7412C1C77BC00054C42 /* background.js in Resources */,
 				ADB3A7472C1C77BC00054C42 /* popup.css in Resources */,
+				AD8AF72B2C8B469E001167F1 /* README.md in Resources */,
 				AD8AF7282C8B3D06001167F1 /* contents in Resources */,
 				ADB3A7452C1C77BC00054C42 /* popup.html in Resources */,
 				ADB3A73D2C1C77BC00054C42 /* images in Resources */,
